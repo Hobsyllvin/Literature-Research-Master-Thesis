@@ -1,6 +1,6 @@
-\documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\documentclass[conference]{IEEEtran}
 
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -14,24 +14,18 @@
 
 \begin{document}
 
-\title{The Impact of Somatosensory Cues vs. High-Fidelity Feedback on Motor Learning in Virtual Reality: a Systematic Review\\}
+\title{How Does the Level of Somatosensory Feedback Fidelity Impact Motor Learning in VR: \\a Systematic Review}
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Reinprecht Christian}
-\IEEEauthorblockA{\textit{Cognitive Robotics (ME)} \\
-\textit{University of Technology}\\
-Delft, Netherlands \\
+\author{\IEEEauthorblockN{Reinprecht Christian}
+\IEEEauthorblockA{TU Delft, NL \\
 C.T.Reinprecht@student.tudelft.nl}
 \and
-\IEEEauthorblockN{2\textsuperscript{nd} Ratschat Alex}
-\IEEEauthorblockA{\textit{Cognitive Robotics (ME)} \\
-\textit{University of Technology}\\
-Delft, Netherlands \\
+\IEEEauthorblockN{Ratschat Alex}
+\IEEEauthorblockA{TU Delft, NL \\
 A.L.Ratschat@tudelft.nl}
 \and
-\IEEEauthorblockN{3\textsuperscript{rd} Marchal-Crespo Laura}
-\IEEEauthorblockA{\textit{Cognitive Robotics (ME)} \\
-\textit{University of Technology}\\
-Delft, Netherlands \\
+\IEEEauthorblockN{Marchal-Crespo Laura}
+\IEEEauthorblockA{TU Delft, NL \\
 L.MarchalCrespo@tudelft.nl}
 }
 
@@ -43,25 +37,47 @@ The abstract will come here. \\
 \end{abstract}
 
 \begin{IEEEkeywords}
-motor learning, cues, high fidelity, virtual reality, review
+motor learning, fidelity, virtual reality, systematic review
 \end{IEEEkeywords}
 
 \section{Introduction}
+
+\begin{comment}
+REWRITTEN FOR BETTER READABILITY:
 Simulations in virtual reality (VR) provide a comprehensive platform for users to acquire new skills and competencies, as well as for the evaluation of their performance while being in a controlled and safe environment \cite{Harris2021ExploringSimulator}. In the virtual environment (VE), complex skills can be studied without giving up on experimental control, which facilitates the understanding of motor learning on a level that is not possible in the physical world \cite{Levac2019LearningReview}. 
-Possible applications involve physical therapy and rehabilitation, sports training, education, and research, as well as gaming and entertainment \cite{Wu2023TrainingReality, Oagaz2022PerformanceReality}. Therefore it is not surprising that there is a great interest in VR-based training simulations, especially to teach skills that would otherwise have to be acquired in dangerous or sensitive environments, such as military training or surgical operations \cite{Lele2013VirtualUtility, Qi2021VirtualScenario}.
+Possible applications involve physical therapy and rehabilitation, sports training, education, marketing, telerobotics, and research, as well as gaming and entertainment \cite{Wu2023TrainingReality, Oagaz2022PerformanceReality}. Therefore it is not surprising that there is a great interest in VR-based training simulations, especially to teach skills that would otherwise have to be acquired in dangerous or sensitive environments, such as construction work, military training, or surgical operations \cite{Adami2021EffectivenessTeleoperation, Lele2013VirtualUtility, Qi2021VirtualScenario}.
+\end{comment}
 
-An important aspect of a VE simulation is its level of immersion, i.e. the ability to create a realistic and enveloping experience that engages the human senses in a way that mimics real-world interactions \cite{Sanchez-Vives2005FromReality}. Suppose that our sensory perceptions are replaced in the virtual environment by providing a natural visual scene, mimicking the interaction forces with the virtual objects, recreating the sound of the interaction, and possibly even the smell of the environment, then the perceptual model we create of our environment will be inferred from the actual stream of sensory data. This stream of sensory data is the virtual environment, and even though we know it is not real, our consciousness is completely transferred into it \cite{Slater2016EnhancingReality}. 
-Exposure to these visual, haptic, auditory, and olfactory sensations will enhance one's feeling of "presence" in the virtual environment, which can be described as the person's mental state of physically being in the virtual environment \cite{Draper1998Telepresence, Sanchez-Vives2005FromReality, Dzardanova2024ExploringReality}. The congruence between the physical stimulation of the biological body and the seen stimulation of one's body in VR will also enhance the sense of body ownership. Aside from the sense of self-location and agency --- which can be achieved by using a head-mounted display with a high frame rate and mapping one's limbs to the virtual body in near real-time --- body ownership is pivotal for achieving embodiment:  the experience that one's virtual avatar and one's actual body are indistinguishable \cite{Kilteni2012TheReality}.
+Simulations in virtual reality (VR) provide a comprehensive platform for users to acquire new skills and competencies, with applications ranging from physical therapy and rehabilitation to sports and industrial training, education, marketing, telerobotics, and research, as well as gaming and entertainment \cite{Wu2023TrainingReality, Oagaz2022PerformanceReality}. Furthermore, the virtual environment (VE) allows for the studying of complex skills, as well as the evaluation of the user's performance without giving up on experimental control, which facilitates the understanding of motor learning on a level that is not possible in the physical world \cite{Harris2021ExploringSimulator, Levac2019LearningReview}. Therefore it is not surprising that there is a great interest in VR-based training simulations, especially to teach skills that would otherwise have to be acquired in dangerous or sensitive environments, such as construction work, military training, or surgical operations \cite{Adami2021EffectivenessTeleoperation, Lele2013VirtualUtility, Qi2021VirtualScenario}.
 
-Such congruence of (multi)sensory feedback, coupled with high levels of embodiment through first-person perspective VR, may offer an effective method for enhancing motor learning and performance \cite{Odermatt2021CongruencyReality}. \\
+When interacting with real-world objects, we do not only rely on visual feedback but also require information obtained through the mechanoreceptors in our skin \cite{AlexandreL.Ratschat2024EvaluatingStudy}. Exposing the user to somatosensory feedback, which includes sensations such as pressure, vibration, temperature, and the position and movement of body parts, may offer a promising approach to increase the effectiveness of motor learning \cite{Sainburg2022MovementNeurorehabilitation, Sigrist2013AugmentedReview}.
+How closely the feedback resembles the real-world interaction in VR is defined by its fidelity \cite{Caird1996PersistentTraining}, ranging from simple vibration cues to high-fidelity feedback that feels like the user is interacting with a real object \cite{Yang2023TheSimulation}.  
 
-The mentioned immersion and embodiment can be obtained by a high fidelity of the virtual environment, which has been defined by how closely the physical simulation matches the operational environment \cite{Caird1996PersistentTraining}.
-Researchers previously assumed that higher fidelity correlates with better training performance in virtual reality \cite{Caird1996PersistentTraining, Waller1998TheTraining}. However, recent research has shown that motor performance was worse in conditions that yielded mid-fidelity, compared to scenarios with high fidelity and well-designed low fidelity \cite{MahdiNabiyouni201520153DUI.}. 
+While researchers previously assumed that higher fidelity correlates with better training performance in VR \cite{Caird1996PersistentTraining, Waller1998TheTraining}, recent research suggests that there is no linear correlation between the level of fidelity and motor performance: Instead, motor performance in a locomotion task was worse in conditions that yielded mid-fidelity, compared to scenarios with high fidelity and well-designed low fidelity \cite{MahdiNabiyouni201520153DUI.}. 
 
-As providing high fidelity to a virtual environment is very costly, it is important to determine when low-fidelity feedback, such as somatosensory cues, is sufficient and in which scenarios high-fidelity feedback is necessary to improve motor learning. This paper presents a systematic review of current research on the impact of somatosensory cues and high-fidelity feedback on motor learning in VR. In addition, it will be addressed how these acquired skills can be applied in the real environment.
+High-fidelity feedback can enhance the feeling of immersion and embodiment --- the experience that one's virtual avatar and one's actual body are indistinguishable \cite{Kilteni2012TheReality} --- and therefore significantly reduce perceptual strain on the subjects by making the interactions within the VE more intuitive \cite{Yang2023TheSimulation}. However, high levels of embodiment may adversely affect motor performance when the sensory feedback received is incongruent with anticipated stimuli, as this may increase the discrepancy between the perceived and actually executed movements \cite{Odermatt2021CongruencyReality}.
+On the other hand, high levels of embodiment, coupled with congruence of (multi)sensory feedback, may offer an effective method for enhancing motor learning and performance \cite{Odermatt2021CongruencyReality}. 
 
-We hypothesize that in situations where complex somatosensory feedback is not required, low-fidelity feedback may have the same effect on motor learning as high-fidelity feedback, which allows for the possibility of a reduced system cost and a simpler experimental design.
+When performing a motor learning task, using a mid-fidelity controller is associated with lower task complexity, effectively reducing the task load \cite{Yang2023TheSimulation}. This may be beneficial for the motor learning performance of people with impaired motor skills \cite{Sigrist2013AugmentedReview}, aligning with the challenge point framework which states that less skilled subjects might not advance if the performed task is too demanding \cite{Guadagnoll2004ChallengeLearning}. \\
 
+\begin{comment}
+An important aspect of a VE simulation is its level of immersion, i.e. the ability to create a realistic and enveloping experience that engages the human senses in a way that mimics real-world interactions \cite{Sanchez-Vives2005FromReality, Slater2016EnhancingReality}. By exposing the user to somatosensory feedback when interacting with objects in VR, one's feeling of presence in the virtual environment can be enhanced, i.e. the person's mental state of physically being in the VE \cite{Draper1998Telepresence, Dzardanova2024ExploringReality}. 
+
+By studying immersion, researchers have explored the effect of different levels of fidelity in VR \cite{Mcmahan2012EvaluatingGame}, which is defined by how closely the physical simulation matches the operational environment \cite{Caird1996PersistentTraining}. 
+While researchers previously assumed that higher fidelity correlates with better training performance in VR \cite{Caird1996PersistentTraining, Waller1998TheTraining}, recent research suggests that there is no linear correlation between the level of fidelity and motor performance: Instead, motor performance in a locomotion task was worse in conditions that yielded mid-fidelity, compared to scenarios with high fidelity and well-designed low fidelity \cite{MahdiNabiyouni201520153DUI.}. In a motor learning task, high fidelity can however significantly reduce perceptual strain on the subjects by making the interactions within the VE more intuitive, while using a mid-fidelity controller is associated with lower task complexity \cite{Yang2023TheSimulation}. This reduction of task load may especially be beneficial for the motor learning performance of people with impaired motor skills \cite{Sigrist2013AugmentedReview}, aligning with the challenge point framework which states that less skilled subjects might not advance if the performed task is too demanding \cite{Guadagnoll2004ChallengeLearning}.
+
+% Embodiment: 
+% - body ownership (vr body belongs to oneself)
+% - agency (being in control of one's own actions)
+% - self-location (experienced location of body in space)
+
+High fidelity can enhance immersion and embodiment, which is the experience that one's virtual avatar and one's actual body are indistinguishable \cite{Kilteni2012TheReality}. However, high levels of embodiment may adversely affect motor performance when the sensory feedback received is incongruent with anticipated stimuli, as this may increase the discrepancy between the perceived and actually executed movements \cite{Odermatt2021CongruencyReality}. 
+On the other hand, high levels of embodiment, coupled with congruence of (multi)sensory feedback, may offer an effective method for enhancing motor learning and performance \cite{Odermatt2021CongruencyReality}. 
+\end{comment}
+
+Since supplying high fidelity to a VE is very costly, it is important to determine in which scenarios low-fidelity feedback, such as through somatosensory cues, is sufficient and under which circumstances high-fidelity feedback is necessary. In this work, we aim to systematically review current research on the impact of different levels of somatosensory feedback on motor learning in VR. Furthermore, this review will address how the level of feedback fidelity may affect the transfer of the learned skills to the real environment.
+
+We hypothesize that in complex movements that necessitate precise timing for the correct execution of the task, such as ballistic movements, a high level of somatosensory feedback fidelity may be beneficial for motor learning. However, in scenarios involving constant movement velocities, low-fidelity feedback may be sufficient for enhancing motor learning performance, allowing for reduced system cost and simpler experimental design. \newpage
 
 \section{General Notes}
 
@@ -76,12 +92,38 @@ We hypothesize that in situations where complex somatosensory feedback is not re
     \begin{enumerate}
         \item Increases embodiment
         \item Enhances motor learning 
+        \item By studying it, researchers have explored the effects of fidelity
+        \begin{itemize}
+            \item display fidelity
+            \item interaction fidelity
+        \end{itemize}
     \end{enumerate} 
     \item Cues and high fidelity to increase immersion
+    \item Mid-fidelity worse than low- or high-fidelity
+    \begin{itemize}
+        \item Also include \textit{uncanny valley} effect here?
+    \end{itemize}
 \end{enumerate}
 \vspace{5mm}
 
-\subsection{Methodology}
+\section{Methods}
+
+Using PRISMA method ...
+
+\subsection{Eligibility criteria}
+\subsubsection{Inclusion criteria}
+To be eligible for inclusion, studies needed to focus on the impact of haptic and/or somatosensory feedback on motor learning in humans. There were no publication date or language limits. The databases Scopus, IEEE Xplore and PubMed were used for this review.
+
+\subsubsection{Exclusion criteria}
+Studies were considered not eligible for inclusion if they were focused on:
+\begin{itemize}
+    \item Studies not related to motor learning in humans,
+    \item Systems not providing haptic feedback in VR,
+    \item Studies that focused on a neurological condition and its implications for motor learning,
+    \item Studies explaining a new assessment system for the evaluation of motor learning.
+\end{itemize}
+
+
 
 \begin{figure}[ht]
     \centering
@@ -91,9 +133,21 @@ We hypothesize that in situations where complex somatosensory feedback is not re
 \end{figure}
 
 
+\subsection{Taken out from introduction}
+\subsubsection{Sensory perceptions in VR}
+Suppose that our sensory perceptions are replaced in the virtual environment by providing a natural visual scene, mimicking the interaction forces with the virtual objects, recreating the sound of the interaction, and possibly even the smell of the environment, then the perceptual model we create of our environment will be inferred from the actual stream of sensory data. This stream of sensory data is the virtual environment, and even though we know it is not real, our consciousness is completely transferred into it \cite{Slater2016EnhancingReality}. 
+
+\subsubsection{Embodiment in VR}
+The congruence between the physical stimulation of the biological body and the seen stimulation of one's body in VR will also enhance the sense of body ownership. Aside from the sense of self-location and agency --- which can be achieved by using a head-mounted display with a high frame rate and mapping one's limbs to the virtual body in near real-time --- body ownership is pivotal for achieving embodiment:  the experience that one's virtual avatar and one's actual body are indistinguishable \cite{Kilteni2012TheReality}.
+
+\subsection{Also interesting}
+Spatial tactile localization depends on sensorimotor binding: preliminary evidence from virtual reality. After the VR task, compared to the baseline condition, the point of subjective equality (PSE) shifted toward the hand that received the haptic feedback during the interaction (toward the right hand for the congruent condition and toward the left hand for the incongruent condition)\cite{Girondini2024SpatialReality}
+
+
 \subsection{Mid-fidelity feedback}
 Recent research has shown that motor performance was worse in conditions that yielded mid-fidelity \cite{MahdiNabiyouni201520153DUI.}.
 Some researchers even compare this dip in performance to the uncanny valley effect first hypothesized by Mori \cite{Mori2012TheValley}, which describes the phenomenon that as robotic likeness to humans increases, our affinity to the robot increases as well, until there is a sharp drop at which the near-identical resemblance to a human being arouses a sense of unease \cite{Bhargava2018EvaluatingSimulations}. Finally, our affinity towards the robot recuperates again as human likeness increases further, and so does the motor performance with high fidelity due to the realism of the VE. 
+
 
 
 \begin{comment}
@@ -145,7 +199,7 @@ Most virtual reality (VR) applications rely on auditory and visual stimulation, 
 
 \subsection{Ideas}
 \begin{itemize}
-    \item Weight perception on the forearm as an interesting topic.
+    \item Weight perception on the forearm is an interesting topic.
 \end{itemize}
 \end{comment}
 
