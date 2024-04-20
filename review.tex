@@ -7,6 +7,9 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{comment}
+\usepackage{pgfplots}
+\usepackage{datatool}
+\pgfplotsset{compat=1.16}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \usepackage[numbers,sort&compress]{natbib}
@@ -81,7 +84,7 @@ After removing the duplicates, the search yielded a total of 329 results.
     \label{fig:prisma}
 \end{figure}
 
-Following the PRISMA method \cite{Page2021TheReviews}, the found results were first screened based on their title and abstract and then reviewed in full length (see fig. \ref{fig:prisma}). After the first round, 
+Following the PRISMA method \cite{Page2021TheReviews}, the found results were first screened based on their title and abstract and then reviewed in full length (see fig. \ref{fig:prisma}). Records were excluded based on the exclusion criteria in \ref{sec:exclusion}
 
 \subsection{Eligibility criteria}
 \label{sec:eligibility}
@@ -89,12 +92,14 @@ Following the PRISMA method \cite{Page2021TheReviews}, the found results were fi
 To be eligible for inclusion, studies needed to focus on the impact of haptic and/or somatosensory feedback on motor learning in humans. There were no publication date or language limits. 
 
 \subsubsection{Exclusion criteria}
-Studies were considered not eligible for inclusion if they were focused on:
+\label{sec:exclusion}
+Records were considered not eligible for inclusion if they were or focused on:
 \begin{itemize}
     \item Studies not related to motor learning in humans,
     \item Systems not providing haptic feedback in VR,
     \item Studies that focused on a neurological condition and its implications for motor learning,
     \item Studies explaining a new assessment system for the evaluation of motor learning.
+    \item Studies of haptic guidance only
 \end{itemize}
 
 
