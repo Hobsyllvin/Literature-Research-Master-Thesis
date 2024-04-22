@@ -7,6 +7,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{comment}
+\usepackage{booktabs}
 
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -67,14 +68,20 @@ We hypothesize that in complex movements that necessitate precise timing for the
 %%%%% METHODS %%%%%
 \section{Methods}
 
+\subsection{Search strategy and data sources}
 Several relevant articles were reviewed at the beginning to find eligible search terms. The query based on the research question consists of three main parts, namely \textit{virtual reality}, \textit{somatosensory feedback}, and \textit{motor learning}, each term with their respective synonyms. 
 
 The final search query was as follows: motor AND (learning OR control OR training OR skills) AND (((virtual OR augmented) AND reality) OR ((remote OR virtual OR simulated) AND environment)) AND (((somatosensory OR haptic OR tactile OR proprioceptive OR kinesthetic OR cutaneous OR somatic) AND 
 (cue* OR feedback OR rendering OR stimul*)) AND (fidelity OR realism OR accuracy OR precision OR exactness OR specificity)). The search terms were applied for the article title, abstract, and keywords.
 
-Three databases (Scopus, IEEE Xplore, and PubMed) were searched in April 2024. Based on the required syntax of each database, the search query was slightly adapted. The exact search queries can be found in \ref{sec:queries}.
-After removing the duplicates, the search yielded a total of 329 results.
+Three databases (Scopus, IEEE Xplore, and PubMed) were searched in April 2024. Based on the required syntax of each database, the search query was slightly adapted. For example, as PubMed only allows for the use of an asterisk for words containing more than three letters, the term \textit{cue*} was changed to (\textit{cue} OR \textit{cues}). The exact search queries can be found in \ref{sec:queries}. 
 
+\subsection{Study Selection}
+The search results were saved in Mendeley. Duplicate publications were identified and removed. Following the PRISMA method \cite{Page2021TheReviews}, the found results were first screened based on their title and abstract and then reviewed in full length (see fig. \ref{fig:prisma}). Records were excluded based on the exclusion criteria in \ref{sec:exclusion}.
+
+\section{Results}
+
+The search yielded a total of 329 results.
 
 \begin{figure}[ht]
     \centering
@@ -83,12 +90,12 @@ After removing the duplicates, the search yielded a total of 329 results.
     \label{fig:prisma}
 \end{figure}
 
-Following the PRISMA method \cite{Page2021TheReviews}, the found results were first screened based on their title and abstract and then reviewed in full length (see fig. \ref{fig:prisma}). Records were excluded based on the exclusion criteria in \ref{sec:exclusion}
+
 
 \subsection{Eligibility criteria}
 \label{sec:eligibility}
 \subsubsection{Inclusion criteria}
-To be eligible for inclusion, studies needed to focus on the impact of haptic and/or somatosensory feedback on motor learning in humans. There were no publication date or language limits. 
+To be eligible for inclusion, studies needed to focus on the impact of haptic and/or somatosensory feedback on motor learning in humans. There were no publication date or language limits. We included studies with healthy participants only, as patients often know how to perform a movement but are physically constrained by their condition, therefore augmented feedback may help the motor learning of patients in a different way compared to healthy subjects \cite{Sigrist2013AugmentedReview}.
 
 \subsubsection{Exclusion criteria}
 \label{sec:exclusion}
@@ -112,6 +119,21 @@ The year of publication of the included studies ranges from 2000 to 2024. As it 
     \caption{Publication dates of the included articles}
     \label{fig:years}
 \end{figure}
+
+\subsection{}
+
+
+\onecolumn
+\begin{table}[]
+\begin{tabular}{@{}p{0.17\textwidth}p{0.17\textwidth}p{0.17\textwidth}p{0.19\textwidth}p{0.2\textwidth}@{}}
+\toprule
+ Feedback Fidelity & Reference & Experimental Design & ??? & Findings \\ \midrule
+ Low & \cite{Huang2007VisualManipulation} &  &  &  \\
+ Mid &  &  &  &  \\
+ High & \cite{Huang2007VisualManipulation} & Turn rotary handle with resonance frequency of the system &  &  \\ \bottomrule
+\end{tabular}
+\end{table}
+
 
 
 \newpage
