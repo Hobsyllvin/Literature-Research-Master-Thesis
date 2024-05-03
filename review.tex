@@ -108,6 +108,9 @@ Records were considered not eligible for inclusion if they were or focused on:
     \item Studies of haptic guidance only
 \end{itemize}
 
+\subsection{Other studies included}
+A second screening of more recent papers (no older than 3 years) was done. 72 papers were re-screened, and 9 more papers were included.
+
 \subsection{Study characteristics}
 
 \subsubsection{Year of publication}
@@ -120,23 +123,63 @@ The year of publication of the included studies ranges from 2000 to 2024. As it 
     \label{fig:years}
 \end{figure}
 
-\subsection{}
+\section{Definitions}
+\subsection{Fidelity}
+Huang et al. suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring the skill from the virtual to the real environment \cite{Huang2006HumanCoordination}
+
+\section{Somatosensory feedback}
+\subsection{Low-fidelity feedback}
+
+\subsection{Mid-fidelity feedback}
+Even though it is not labeled as such, Morris et al. conducted an experimental study in which they provided mid-fidelity feedback to the participants. They were asked to follow a trajectory with a haptic device stylus, and in the first condition of the experiment the device provided force feedback that was pointing in the opposite direction as the trajectory, while the participants were asked to keep the device in the movement plane, so to exactly counteract the applied force \cite{Morris2007HapticLearning}. While participants applied the same force necessary to follow the trajectory, the movement and position control differed from actually following the pattern.
+
+
+
+\subsection{High-fidelity feedback}
+Huang et al. showed in an experiment that high-fidelity feedback can be helpful in controlling an external dynamic system, as it enhances performance during online control \cite{Huang2007VisualManipulation}. The subjects were asked to excite a spring-inertia system with maximum amplitude, which could be achieved by leveraging the resonance frequency of the system and therefore increasing its oscillations. When haptic feedback was provided, the participants were more precise in finding the frequency and decreased their variability.
+
+Haptic guidance specifically can help in the temporal aspects of learning a task \cite{Feygin2002HapticSkill} 
+
+\section{Framework}
+
+\subsection{Hardware precision}
+"The required refresh rate to provide realistic
+force feedback is commonly accepted to be at least 1,000 Hz.
+However, this refresh rate is widely debated. According to
+Burdea [14], a minimum refresh rate of only 300 Hz is
+acceptable. Conversely, a study by Booth et al. [15] using
+SensAble’s Premium 1.5 to deduce the minimum acceptable
+haptic refresh rate, suggests that “a minimum acceptable
+refresh rate must lie within the 550-600 Hz range.” The
+necessary rate of update is dependent upon the stiffness of
+the surfaces to be simulated. A stiff contact between objects is
+better simulated by higher refresh rates, whereas lower
+refresh rates are satisfactory for softer objects. Additional
+methods can be applied to simulate touching stiffer objects
+such as combining vibrations with force to the end effector to
+represent the small vibrations felt upon object contact [16].
+Typically, a trade-off must be made between the accuracy of
+the haptics effects produced and the speed required within
+the application." \cite{Coles2011TheArt}
+
+\section{Discussion}
+Suggestions: For the post hoc evaluation of the haptic feedback fidelity, it would be helpful if researchers included specifications of the device used, such as hard- and software latency, maximum force, sensor and actuator accuracy, etc., even if the device is commercially available. This makes the objective rating of the feedback fidelity easier and quicker, as even for commercially used devices the specifications might not be available anymore at some point in the future.
 
 
 \onecolumn
+
 \begin{table}[]
-\begin{tabular}{@{}p{0.17\textwidth}p{0.17\textwidth}p{0.17\textwidth}p{0.19\textwidth}p{0.2\textwidth}@{}}
+\begin{tabular}{@{}p{0.13\textwidth}p{0.08\textwidth}p{0.23\textwidth}p{0.19\textwidth}p{0.27\textwidth}@{}}
 \toprule
- Feedback Fidelity & Reference & Experimental Design & ??? & Findings \\ \midrule
- Low & \cite{Huang2007VisualManipulation} &  &  &  \\
- Mid &  &  &  &  \\
- High & \cite{Huang2007VisualManipulation} & Turn rotary handle with resonance frequency of the system &  &  \\ \bottomrule
+ Feedback Fidelity & Reference & Experimental Design & Feedback Type & Findings \\ \midrule
+ Low & \cite{Huang2007VisualManipulation} &  &  & Auditory cues with feed-forward control do not help with task performance \\ \\
+ Mid & \cite{Morris2007HapticLearning} & Follow trajectory with stylus & Haptic device with the opposite of the embedded force pattern & Performance was worse in haptic only compared to visual only, and far worse than visuo-haptic condition \\ \\
+ High & \cite{Huang2007VisualManipulation} & Maximum excitement of dynamic system with rotary handle at resonance frequency &  & decreased variance, increased precision \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\twocolumn
 
-
-\newpage
 \section*{Appendix}
 
 \subsection{Queries}
