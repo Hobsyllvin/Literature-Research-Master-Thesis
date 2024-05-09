@@ -1,4 +1,4 @@
-\begin{tikzpicture}[scale=4]
+\begin{tikzpicture}[scale=3.5]
     
     % Add axis labels
     \foreach \x in {0,1,2,3,4} {
@@ -7,24 +7,29 @@
     }
 
     % Draw axes
-    \draw[thick,<->] (0,2) -- (4,2) node[anchor=north west] {Haptic Fidelity};
-    \draw[thick,<->] (2,0) -- (2,4) node[anchor=south east] {Versatility};
+    \draw[thick,<->] (0,2) -- (4,2) node[anchor=south west] {Haptic Fidelity};
+    \draw[thick,<->] (2,0) -- (2,4) node[anchor=south] {Versatility};
+
+    \node at (0,1.9) {\footnotesize{abstract}};
+    \node at (4,1.9) {\footnotesize{realistic}};
+    \node at (1.8,0.1) {\footnotesize{specific}};
+    \node at (1.8,3.9) {\footnotesize{generic}};
 
     % Legend
     \draw[fill=white] (0.1,3.9) rectangle (1.2,3.25); % Legend border
     \node[anchor=west] at (0.15, 3.8) {\textbf{Legend}}; % Legend title
     
     \node[circle, fill=c1, inner sep=2.3pt] at (0.22, 3.65) {};
-    \node[anchor=west] at (0.25, 3.65) {Quality q > 0.9};
+    \node[anchor=west] at (0.25, 3.65) {\footnotesize{Quality q > 0.9}};
 
     \node[circle, fill=c2, inner sep=2pt] at (0.22, 3.55) {};
-    \node[anchor=west] at (0.25, 3.55) {Quality 0.8 < q \leq 0.9};
+    \node[anchor=west] at (0.25, 3.55) {\footnotesize{Quality 0.8 < q \leq 0.9}};
 
     \node[circle, fill=c3, inner sep=1.7pt] at (0.22, 3.45) {};
-    \node[anchor=west] at (0.25, 3.45) {Quality 0.7 < q \leq 0.8};
+    \node[anchor=west] at (0.25, 3.45) {\footnotesize{Quality 0.7 < q \leq 0.8}};
 
     \node[circle, fill=c4, inner sep=1.4pt] at (0.22, 3.35) {};
-    \node[anchor=west] at (0.25, 3.35) {Quality 0.6 q \leq 0.6 };
+    \node[anchor=west] at (0.25, 3.35) {\footnotesize{Quality 0.6 q \leq 0.6}};
     
     % Sample data points
     \node[circle, fill=c1, inner sep=2.3pt] at (3.5,2) {};
