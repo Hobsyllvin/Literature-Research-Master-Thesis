@@ -120,7 +120,7 @@ A second screening of more recent papers (no older than 3 years) was done. 72 pa
 \subsection{Study characteristics}
 
 \subsubsection{Year of publication}
-The year of publication of the included studies ranges from 2000 to 2024. As it can be seen in \ref{fig:years}, the number of studies has greatly increased in the past decade, with a peak in 2018.
+The year of publication of the included studies ranges from 2000 to 2024. As seen in \ref{fig:years}, the number of studies has greatly increased in the past decade, with a peak in 2018.
 
 \begin{figure}[ht]
     \centering
@@ -137,7 +137,7 @@ Huang et al. suggested that skill transfer might be a useful paradigm to evaluat
 \subsection{Low-fidelity feedback}
 
 \subsection{Mid-fidelity feedback}
-Even though it is not labeled as such, Morris et al. conducted an experimental study in which they provided mid-fidelity feedback to the participants. They were asked to follow a trajectory with a haptic device stylus, and in the first condition of the experiment the device provided force feedback that was pointing in the opposite direction as the trajectory, while the participants were asked to keep the device in the movement plane, so to exactly counteract the applied force \cite{Morris2007}. While participants applied the same force necessary to follow the trajectory, the movement and position control differed from actually following the pattern.
+Even though it is not labeled as such, Morris et al. conducted an experimental study in which they provided mid-fidelity feedback to the participants. They were asked to follow a trajectory with a haptic device stylus, and in the first condition of the experiment the device provided force feedback that was pointing in the opposite direction as the trajectory, while the participants were asked to keep the device in the movement plane, so to counteract the applied force exactly \cite{Morris2007}. While participants applied the same force necessary to follow the trajectory, the movement and position control differed from actually following the pattern.
 
 
 
@@ -146,7 +146,7 @@ Huang et al. showed in an experiment that high-fidelity feedback can be helpful 
 
 Haptic guidance specifically can help in the temporal aspects of learning a task \cite{Feygin2002HapticSkill} 
 
-\section{Framework}
+\subsection{Framework}
 
 \subsection{Hardware precision}
 "The required refresh rate to provide realistic
@@ -169,6 +169,23 @@ the haptics effects produced and the speed required within
 the application." \cite{Coles2011TheArt}
 About latency and its impacts: \cite{Gourishetti2018PassiveFeedback}.
 Ballistic movements: rapid, involuntary movement which is motor programmed, and for which visual feedback is not possible \cite{Wall2000}.
+
+\section{Results}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{silhouette.pdf} 
+    \caption{Silhouette scores for the numbers of clusters}
+    \label{fig:silhouette}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{literature_data.pdf} 
+    \caption{KMeans clustering of the data}
+    \label{fig:kmeans}
+\end{figure}
+
 
 \section{Discussion}
 Suggestions: For the post hoc evaluation of the haptic feedback fidelity, it would be helpful if researchers included specifications of the device used, such as hard- and software latency, maximum force, sensor and actuator accuracy, etc., even if the device is commercially available. This makes the objective rating of the feedback fidelity easier and quicker, as even for commercially used devices the specifications might not be available anymore at some point in the future.
