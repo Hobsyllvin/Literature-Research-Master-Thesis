@@ -1,0 +1,126 @@
+\begin{tikzpicture}[scale=4]
+    
+    % Add axis labels
+    \foreach \x in {0,1,2,3,4} {
+        \draw [very thin, lightgray](\x cm, 0-0.05) -- (\x cm, 4+0.05) node[anchor=north] {};
+        \draw [very thin, lightgray](0-0.05,\x cm) -- (4+0.05,\x cm) node[anchor=east] {};
+    }
+
+    % Draw axes
+    \draw[thick,<->] (0,2) -- (4,2) node[anchor=north west] {Haptic Fidelity};
+    \draw[thick,<->] (2,0) -- (2,4) node[anchor=south east] {Versatility};
+
+    % Legend
+    \draw[fill=white] (0.1,3.9) rectangle (1.2,3.25); % Legend border
+    \node[anchor=west] at (0.15, 3.8) {\textbf{Legend}}; % Legend title
+    
+    \node[circle, fill=c1, inner sep=2.3pt] at (0.22, 3.65) {};
+    \node[anchor=west] at (0.25, 3.65) {Quality q > 0.9};
+
+    \node[circle, fill=c2, inner sep=2pt] at (0.22, 3.55) {};
+    \node[anchor=west] at (0.25, 3.55) {Quality 0.8 < q \leq 0.9};
+
+    \node[circle, fill=c3, inner sep=1.7pt] at (0.22, 3.45) {};
+    \node[anchor=west] at (0.25, 3.45) {Quality 0.7 < q \leq 0.8};
+
+    \node[circle, fill=c4, inner sep=1.4pt] at (0.22, 3.35) {};
+    \node[anchor=west] at (0.25, 3.35) {Quality 0.6 q \leq 0.6 };
+    
+    % Sample data points
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.5,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.22,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (0.63,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.38,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.75,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (2.63,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (2.75,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.21,0) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (4,0) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (4,1) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.88,1) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (1.5,3) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.59,1) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.09,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (2.57,4) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.21,1) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.01,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.25,2) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (2.84,3) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.7,1) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (2.57,4) {};
+    \node[circle, fill=c1, inner sep=2.3pt] at (3.5,2) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.34,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.46,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.46,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.46,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.62,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.75,2) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.09,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.71,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.29,2) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (2.28,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.42,3) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (2.76,1) {};
+    \node[circle, fill=c2, inner sep=2.0pt] at (3.71,2) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (2.2,2) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (2.8,2) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (1.25,3) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (1.39,2) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (2.49,3) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (3.61,0) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (1.08,1) {};
+    \node[circle, fill=c3, inner sep=1.7pt] at (2.31,3) {};
+    \node[circle, fill=c4, inner sep=1.4pt] at (4,1) {};
+
+
+    % Add citations to datapoints
+    \node at (3.5,2.1) {\footnotesize{\cite{Brickler2019}}};
+    \node at (3.22,2.1) {\footnotesize{\cite{Caccianiga2021}}};
+    \node at (2.2,2.1) {\footnotesize{\cite{Chappell2022}}};
+    \node at (2.8,2.1) {\footnotesize{\cite{Chi2017}}};
+    \node at (0.63,2.1) {\footnotesize{\cite{Crespo2015}}};
+    \node at (3.21,1.1) {\footnotesize{\cite{Dai2023}}};
+    \node at (3.01,2.1) {\footnotesize{\cite{Dai2023}}};
+    \node at (3.34,1.1) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.39,0.9) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.51,0.9) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.46,1.1) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.62,0.9) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.75,2.1) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.38,1.9) {\footnotesize{\cite{Feygin2002HapticSkill}}};
+    \node at (3.75,2.2) {\footnotesize{\cite{Feygin2002HapticSkill}}};
+    \node at (2.63,2.1) {\footnotesize{\cite{Gambaro2014}}};
+    \node at (2.75,1.9) {\footnotesize{\cite{Gambaro2014}}};
+    \node at (3.21,0.1) {\footnotesize{\cite{Graham2008}}};
+    \node at (3.09,1.1) {\footnotesize{\cite{Grant2019}}};
+    \node at (3.25,1.9) {\footnotesize{\cite{Gunter2022}}};
+    \node at (1.25,3.1) {\footnotesize{\cite{Hanashima2023}}};
+    \node at (4,0.1) {\footnotesize{\cite{Huang2006}}};
+    \node at (4,1.1) {\footnotesize{\cite{Huang2007}}};
+    \node at (1.08,1.1) {\footnotesize{\cite{Lee2012}}};
+    \node at (3.88,1.1) {\footnotesize{\cite{LeeH2014}}};
+    \node at (2.84,3.1) {\footnotesize{\cite{LeeY2019}}};
+    \node at (3.7,1.1) {\footnotesize{\cite{LiuG2014}}};
+    \node at (1.5,3.1) {\footnotesize{\cite{LiuH2019}}};
+    \node at (3.71,1.2) {\footnotesize{\cite{Macuga2019}}};
+    \node at (4,0.9) {\footnotesize{\cite{Manivannan2008}}};
+    \node at (2.51,4.1) {\footnotesize{\cite{McAnally2023}}};
+    \node at (3.59,1.1) {\footnotesize{\cite{Mohanty2023}}};
+    \node at (3.29,2.2) {\footnotesize{\cite{Morris2007}}};
+    \node at (2.28,1.1) {\footnotesize{\cite{Najdovski2020}}};
+    \node at (3.42,3.1) {\footnotesize{\cite{Oezen2022}}};
+    \node at (3.09,1.9) {\footnotesize{\cite{Oquendo2024}}};
+    \node at (1.39,2.1) {\footnotesize{\cite{Perez2023}}};
+    \node at (3.5,2.2) {\footnotesize{\cite{Rodriguez2010}}};
+    \node at (2.49,3.1) {\footnotesize{\cite{Trinitatova2023}}};
+    \node at (3.61,0.1) {\footnotesize{\cite{Vaghela2021}}};
+    \node at (2.76,1.1) {\footnotesize{\cite{Vaghela2021}}};
+    \node at (2.63,4.1) {\footnotesize{\cite{Vasudevan2020}}};
+    \node at (3.71,1.9) {\footnotesize{\cite{Wall2000}}};
+    \node at (2.31,3.1) {\footnotesize{\cite{Xia2023}}};
+
+    % Add connecting lines wherever necessary
+    \draw [very thin, gray](3.29,2.16) -- (3.29,2.03) node[anchor=north] {};  
+
+    
+\end{tikzpicture}
