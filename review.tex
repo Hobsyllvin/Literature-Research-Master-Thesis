@@ -1,11 +1,12 @@
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \documentclass[conference]{IEEEtran}
 \usepackage{fontspec}
+\usepackage{tikz}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
-\usepackage{xcolor}
+\usepackage{xcolor} 
 \usepackage{comment}
 \usepackage{booktabs}
 
@@ -14,6 +15,12 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \usepackage[numbers,sort&compress]{natbib}
 
+
+% Some colors
+\definecolor{c1}{RGB}{84, 156, 22}
+\definecolor{c2}{RGB}{190, 214, 71}
+\definecolor{c3}{RGB}{237, 163, 52}
+\definecolor{c4}{RGB}{194, 36, 21}
 
 \begin{document}
 
@@ -35,8 +42,7 @@ L.MarchalCrespo@tudelft.nl}
 \maketitle
 
 \begin{abstract}
-The abstract will come here. \\
-
+The abstract will come here.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -54,7 +60,7 @@ The degree to which the feedback in the VE mimics real-world interaction is dete
 % Teasing the research topic
 While researchers previously assumed that higher fidelity correlates with better training performance in VR \cite{Caird1996PersistentTraining, Waller1998TheTraining}, as the interaction feels more natural, recent research suggests that there might be no linear correlation between the level of fidelity and motor performance: Instead, motor performance decreased in conditions that yielded mid-fidelity, compared to scenarios with high fidelity and well-designed low fidelity \cite{MahdiNabiyouni201520153DUI.}.
 
-However, regarding task complexity, using a mid-fidelity controller may be beneficial, as it has been shown to effectively reduce the task load in a drilling task \cite{Yang2023TheSimulation}. This might be valuable for the motor learning performance of people with impaired motor skills \cite{Sigrist2013AugmentedReview}, aligning with the challenge point framework which states that less skilled subjects might not advance if the performed task is too demanding \cite{Guadagnoll2004ChallengeLearning}. \\
+However, regarding task complexity, using a mid-fidelity controller may be beneficial, as it has been shown to effectively reduce the task load in a drilling task \cite{Yang2023TheSimulation}. This might be valuable for the motor learning performance of people with impaired motor skills \cite{Sigrist2013AugmentedReview}, aligning with the challenge point framework which states that less skilled subjects might not advance if the performed task is too demanding \cite{Guadagnoll2004ChallengeLearning}. 
 
 % Added reviews, second round of going to research gap
 Extensive reviews have been conducted to illuminate the impact of haptic feedback in VR-based training \cite{Sigrist2013AugmentedReview} and the general utility of haptic simulation in motor learning \cite{Al-Saud2021TheReview}. However, it remains unclear how exactly different levels of haptic feedback fidelity affect motor learning, and to our knowledge, it has not been disentangled which kinds of tasks to be learned necessitate which degree of feedback accuracy.
@@ -104,8 +110,8 @@ Records were considered not eligible for inclusion if they were or focused on:
     \item Studies not related to motor learning in humans,
     \item Systems not providing haptic feedback in VR,
     \item Studies that focused on a neurological condition and its implications for motor learning,
-    \item Studies explaining a new assessment system for the evaluation of motor learning.
-    \item Studies of haptic guidance only
+    \item Studies explaining a new assessment system for the evaluation of motor learning,
+    \item Studies of haptic guidance only.
 \end{itemize}
 
 \subsection{Other studies included}
@@ -125,18 +131,18 @@ The year of publication of the included studies ranges from 2000 to 2024. As it 
 
 \section{Definitions}
 \subsection{Fidelity}
-Huang et al. suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring the skill from the virtual to the real environment \cite{Huang2006HumanCoordination}
+Huang et al. suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring the skill from the virtual to the real environment \cite{Huang2006}
 
 \section{Somatosensory feedback}
 \subsection{Low-fidelity feedback}
 
 \subsection{Mid-fidelity feedback}
-Even though it is not labeled as such, Morris et al. conducted an experimental study in which they provided mid-fidelity feedback to the participants. They were asked to follow a trajectory with a haptic device stylus, and in the first condition of the experiment the device provided force feedback that was pointing in the opposite direction as the trajectory, while the participants were asked to keep the device in the movement plane, so to exactly counteract the applied force \cite{Morris2007HapticLearning}. While participants applied the same force necessary to follow the trajectory, the movement and position control differed from actually following the pattern.
+Even though it is not labeled as such, Morris et al. conducted an experimental study in which they provided mid-fidelity feedback to the participants. They were asked to follow a trajectory with a haptic device stylus, and in the first condition of the experiment the device provided force feedback that was pointing in the opposite direction as the trajectory, while the participants were asked to keep the device in the movement plane, so to exactly counteract the applied force \cite{Morris2007}. While participants applied the same force necessary to follow the trajectory, the movement and position control differed from actually following the pattern.
 
 
 
 \subsection{High-fidelity feedback}
-Huang et al. showed in an experiment that high-fidelity feedback can be helpful in controlling an external dynamic system, as it enhances performance during online control \cite{Huang2007VisualManipulation}. The subjects were asked to excite a spring-inertia system with maximum amplitude, which could be achieved by leveraging the resonance frequency of the system and therefore increasing its oscillations. When haptic feedback was provided, the participants were more precise in finding the frequency and decreased their variability.
+Huang et al. showed in an experiment that high-fidelity feedback can be helpful in controlling an external dynamic system, as it enhances performance during online control \cite{Huang2007}. The subjects were asked to excite a spring-inertia system with maximum amplitude, which could be achieved by leveraging the resonance frequency of the system and therefore increasing its oscillations. When haptic feedback was provided, the participants were more precise in finding the frequency and decreased their variability.
 
 Haptic guidance specifically can help in the temporal aspects of learning a task \cite{Feygin2002HapticSkill} 
 
@@ -161,22 +167,28 @@ represent the small vibrations felt upon object contact [16].
 Typically, a trade-off must be made between the accuracy of
 the haptics effects produced and the speed required within
 the application." \cite{Coles2011TheArt}
+About latency and its impacts: \cite{Gourishetti2018PassiveFeedback}.
+Ballistic movements: rapid, involuntary movement which is motor programmed, and for which visual feedback is not possible \cite{Wall2000}.
 
 \section{Discussion}
 Suggestions: For the post hoc evaluation of the haptic feedback fidelity, it would be helpful if researchers included specifications of the device used, such as hard- and software latency, maximum force, sensor and actuator accuracy, etc., even if the device is commercially available. This makes the objective rating of the feedback fidelity easier and quicker, as even for commercially used devices the specifications might not be available anymore at some point in the future.
 
-Often, an artificial task is chosen, such as tracking a trajectory with a steering wheel, where the velocity of the car is constant to eliminate the use of foot pedals \cite{Lee2014CombiningTask}. For the retention, the subjects are using the exact same setup, so parameters such as the degrees of freedom, and the stimuli of experiment and retention are the same, thus increasing the level of fidelity. However, the performance of the participants driving a real car, or even driving in a more realistic simulator is never evaluated, despite this actually being the interesting question. In the end, we want to know how we can effectively improve motor learning performance by providing haptic feedback to the user. If we are doing this only for artificial tasks, we are making the experimental setup easier and possibly cheaper, but not exploring the greater possibilities this technology might offer. 
+Often, an artificial task is chosen, such as tracking a trajectory with a steering wheel, where the velocity of the car is constant to eliminate the use of foot pedals \cite{LeeH2014}. For the retention, the subjects are using the exact same setup, so parameters such as the degrees of freedom, and the stimuli of experiment and retention are the same, thus increasing the level of fidelity. However, the performance of the participants driving a real car, or even driving in a more realistic simulator is never evaluated, despite this actually being the interesting question. In the end, we want to know how we can effectively improve motor learning performance by providing haptic feedback to the user. If we are doing this only for artificial tasks, we are making the experimental setup easier and possibly cheaper, but not exploring the greater possibilities this technology might offer. 
+
+One important finding is that haptic feedback might be especially important when learning a motor task that requires 3 dimensions. Studies that required the participants to follow a trajectory in 2D have often found no significant improvement in task performance when providing haptic feedback, compared to visual feedback only (\cite{Gambaro2014}, \cite{LiuG2014}, \cite{LeeH2014}), whereas studies involving trajectory following in 3 dimensions have shown a significant improvement with the introduction of haptic feedback (\cite{Grant2019}, \cite{Rodriguez2010}, ...)
 
 
 \onecolumn
+
+\include{tikz_graphic}
 
 \begin{table}[]
 \begin{tabular}{@{}p{0.13\textwidth}p{0.08\textwidth}p{0.23\textwidth}p{0.19\textwidth}p{0.27\textwidth}@{}}
 \toprule
  Feedback Fidelity & Reference & Experimental Design & Feedback Type & Findings \\ \midrule
- Low & \cite{Huang2007VisualManipulation} &  &  & Auditory cues with feed-forward control do not help with task performance \\ \\
- Mid & \cite{Morris2007HapticLearning} & Follow trajectory with stylus & Haptic device with the opposite of the embedded force pattern & Performance was worse in haptic only compared to visual only, and far worse than visuo-haptic condition \\ \\
- High & \cite{Huang2007VisualManipulation} & Maximum excitement of dynamic system with rotary handle at resonance frequency &  & decreased variance, increased precision \\ \bottomrule
+ Low & \cite{Huang2007} &  &  & Auditory cues with feed-forward control do not help with task performance \\ \\
+ Mid & \cite{Morris2007} & Follow trajectory with stylus & Haptic device with the opposite of the embedded force pattern & Performance was worse in haptic only compared to visual only, and far worse than visuo-haptic condition \\ \\
+ High & \cite{Huang2007} & Maximum excitement of dynamic system with rotary handle at resonance frequency &  & decreased variance, increased precision \\ \bottomrule
 \end{tabular}
 \end{table}
 
