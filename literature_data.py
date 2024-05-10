@@ -68,7 +68,7 @@ def optimal_kmeans(data, max_k=10):
     plt.xlabel("Number of Clusters", fontsize=12)
     plt.ylabel("Silhouette Score", fontsize=12)
     plt.grid(True)
-    plt.savefig('silhouette.pdf', format='pdf', bbox_inches='tight')
+    plt.savefig('figures/silhouette.pdf', format='pdf', bbox_inches='tight')
 
     plt.show()
 
@@ -99,6 +99,6 @@ data['Cluster'] = final_kmeans.labels_
 # Plotting the clusters with Voronoi regions
 fig, ax = plt.subplots(figsize=(8, 8))
 plot_voronoi(final_kmeans, ax, X)
-plt.savefig('literature_data.pdf', format='pdf', bbox_inches='tight')
+plt.savefig('figures/literature_data.pdf', format='pdf', bbox_inches='tight')
 plt.show()
 
