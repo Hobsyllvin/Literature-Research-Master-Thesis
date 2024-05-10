@@ -1,30 +1,40 @@
 %%%%% RESULTS %%%%%%
 \twocolumn
 
-\section{Results}
-Here come the results.
+\section{\struct{Results}}
+Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively.
 
-\begin{figure*}
+\begin{figure*}[htbp]
     \input{figures/tikz_graphic}
     \caption{Haptic fidelity and versatility scores for the included papers}
     \label{fig:fidelity_plot}
 \end{figure*}
 
+\subsection{\struct{KMeans clustering}}
 
-\begin{figure}[]
+In order to structure the data, we clustered the evaluated systems using the KMeans algorithm. The optimal number of clusters was calculated based on the silhouette score \cite{Rousseeuw1987Silhouettes:Analysis} (see figure \ref{fig:silhouette}.
+
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{figures/silhouette.pdf} 
     \caption{Silhouette scores for the numbers of clusters}
     \label{fig:silhouette}
 \end{figure}
 
-\begin{figure}[]
+As can be seen in figure \ref{fig:kmeans}, the data was separated in 9 different clusters. Each cluster center is depicted by a small blue dot.
+
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{figures/literature_data.pdf} 
     \caption{KMeans clustering of the data}
     \label{fig:kmeans}
 \end{figure}
 
+
+\subsection{\struct{Evaluation of the clusters}}
+Cluster I unites studies that have a relatively low haptic fidelity score, however they have a fairly high versatility. This is because ..., in the papers haptic feedback had this effect, ...
+
+Cluster IV and V concern studies with ...
 
 
 

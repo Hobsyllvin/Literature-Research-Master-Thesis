@@ -8,6 +8,7 @@
 \end{figure*} 
 
 \section{Methods}
+\label{sec:methods}
 
 The method of the systematic review was based on the PRISMA methodology \cite{Page2021TheReviews} to ensure transparent and complete reporting on the topics examined.
 
@@ -54,29 +55,32 @@ The year of publication of the included studies ranges from 2000 to 2024. As see
     \label{fig:years}
 \end{figure} 
 
-\subsubsection{}
+\subsubsection{\struct{Body parts involved}}
+Make graph to quantify which body parts are involved in which paper (make pie chart).
 
 
 \section{Definitions}
-\subsection{Fidelity}
-Huang et al. suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring the skill from the virtual to the real environment \cite{Huang2006}
+\subsection{\struct{Feedback Fidelity}}
+Feedback fidelity refers to the accuracy and realism of stimuli provided to the user when they are interacting with the virtual environment. 
 
-\section{Somatosensory feedback}
-\subsection{Low-fidelity feedback}
+Several frameworks have been proposed to assess the feedback fidelity of the VE. They concentrate on either the physical attributes of the system (e.g. the FIFA framework developed by McMahan et al. \cite{McMahan2011ExploringGames}), aim to evaluate feedback fidelity through questionnaires (e. g. the haptics addition \cite{Boos2017ErweiterungHaptik} to the User Experience Questionnaire \cite{Laugwitz2008ConstructionQuestionnaire}), or focus on the effect of the system. Huang et al. for example suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring the skill from the virtual to the real environment \cite{Huang2006}.
 
-\subsection{Mid-fidelity feedback}
-Even though it is not labeled as such, Morris et al. conducted an experimental study in which they provided mid-fidelity feedback to the participants. They were asked to follow a trajectory with a haptic device stylus, and in the first condition of the experiment the device provided force feedback that was pointing in the opposite direction as the trajectory, while the participants were asked to keep the device in the movement plane, so to counteract the applied force exactly \cite{Morris2007}. While participants applied the same force necessary to follow the trajectory, the movement and position control differed from actually following the pattern.
+These frameworks, while addressing particular subjective and objective dimensions of haptic feedback systems, fail to capture their full diversity. This gap is addressed by Muender et al., who developed the Haptic Feedback Fidelity Framework \cite{Muender2022HapticReality}.
+It helps to evaluate a system's haptic feedback fidelity ranging from abstract to realistic, and introduces versatility as a second axis, which allows for the differentiation between generic and specific haptic feedback systems.
 
+In this review paper, we extend the Haptic Feedback Fidelity Framework by a third axis, taking into account a quality score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have actually been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
 
+We then evaluate the selected articles described in section \ref{sec:methods}  based on this framework.
 
-\subsection{High-fidelity feedback}
-Huang et al. showed in an experiment that high-fidelity feedback can be helpful in controlling an external dynamic system, as it enhances performance during online control \cite{Huang2007}. The subjects were asked to excite a spring-inertia system with maximum amplitude, which could be achieved by leveraging the resonance frequency of the system and therefore increasing its oscillations. When haptic feedback was provided, the participants were more precise in finding the frequency and decreased their variability.
+\section{\struct{Framework}}
 
-Haptic guidance specifically can help in the temporal aspects of learning a task \cite{Feygin2002HapticSkill} 
+The framework is built on eight foundational factors, describing th features of a system and their value, and six limiting factors that negatively impact the perception. Each factor is rated on a 5-point Likert-scale (0-4).
 
-\subsection{Framework}
-
-\subsubsection{Hardware precision}
+\subsection{\struct{Haptic Fidelity}}
+\subsubsection{\struct{Foundational Factors}}
+\paragraph{\struct{Body Location}}
+E.g. body parts involved.
+\begin{comment}
 "The required refresh rate to provide realistic
 force feedback is commonly accepted to be at least 1,000 Hz.
 However, this refresh rate is widely debated. According to
@@ -97,3 +101,50 @@ the haptics effects produced and the speed required within
 the application." \cite{Coles2011TheArt}
 About latency and its impacts: \cite{Gourishetti2018PassiveFeedback}.
 Ballistic movements: rapid, involuntary movement which is motor programmed, and for which visual feedback is not possible \cite{Wall2000}.
+\end{comment}
+
+\paragraph{\struct{Body Area}}
+E.g. body area involved. 
+\paragraph{\struct{Stimuli}}
+Etc.
+
+\paragraph{\struct{Magnitude}}
+Etc.
+
+\paragraph{\struct{Sensory Integrity}}
+Etc.
+
+\paragraph{\struct{Degrees of Freedom}}
+Etc.
+
+\paragraph{\struct{Hardware Precision}}
+Etc.
+
+\paragraph{\struct{Software Precision}}
+According to \cite{Coles2011TheArt}, the minimum acceptable refresh rate must lie within the 550-600 Hz range, ...
+
+\subsubsection{\struct{Limiting Factors}}
+Etc.
+
+\paragraph{\struct{Dependency}}
+Etc.
+
+\paragraph{\struct{Distinguishability}}
+Etc.
+
+\paragraph{\struct{Hardware Latency}}
+Latency of over 25ms, according to ...
+
+\paragraph{\struct{Software Latency}}
+Etc.
+
+\paragraph{\struct{Side Effects}}
+Etc.
+
+\paragraph{\struct{Constraints}}
+Etc.
+
+\subsection{\struct{Versatility}}
+
+\subsection{\struct{Quality score}}
+In total, there were 14 parameters which needed to be evaluated for each haptic feedback system. We calculated a score based on the percentage of parameters, that were not described in the paper itself, nor could be accessed through an internet research (example, calculation etc.).
