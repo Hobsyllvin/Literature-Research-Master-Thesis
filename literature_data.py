@@ -63,10 +63,10 @@ def optimal_kmeans(data, max_k=10):
     print(f"The optimal number of clusters is {optimal_n_clusters}.")
     
     # Plot the silhouette scores
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(7, 4))
     plt.plot(range_n_clusters, silhouette_scores, marker='o', linestyle='-', color='b')
-    plt.xlabel("Number of Clusters", fontsize=12)
-    plt.ylabel("Silhouette Score", fontsize=12)
+    plt.xlabel("Number of Clusters", fontsize=14)
+    plt.ylabel("Silhouette Score", fontsize=14)
     plt.grid(True)
     plt.savefig('figures/silhouette.pdf', format='pdf', bbox_inches='tight')
 
