@@ -24,14 +24,22 @@ def plot_voronoi(kmeans, ax, data):
     ax.scatter(data[:, 0], data[:, 1], s=30, c='#000000')
     
     # Roman numerals for labeling clusters from I to VIII
-    roman_numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII']
+    roman_numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
+    
     # Annotating each cluster center with a Roman numeral
-    for i, center in enumerate(final_kmeans.cluster_centers_):
-        plt.text(center[0], center[1]+0.2, roman_numerals[i], fontsize=14, ha='center', va='center', color='black')
+    plt.text(1.38, 3.2, 'I', fontsize=14, ha='center', va='center', color='black')
+    plt.text(2.6, 4.2, 'II', fontsize=14, ha='center', va='center', color='black')
+    plt.text(2.92, 3.2, 'III', fontsize=14, ha='center', va='center', color='black')
+    plt.text(2.77, 2.2, 'IV', fontsize=14, ha='center', va='center', color='black')
+    plt.text(3.44, 2.2, 'V', fontsize=14, ha='center', va='center', color='black')
+    plt.text(3.58, 1.2, 'VI', fontsize=14, ha='center', va='center', color='black')
+    plt.text(3.61, 0.2, 'VII', fontsize=14, ha='center', va='center', color='black')
+    plt.text(2.71, 1.2, 'VIII', fontsize=14, ha='center', va='center', color='black')
+    plt.text(1.01, 2.2, 'IX', fontsize=14, ha='center', va='center', color='black')
 
     # Set plot limits
-    ax.set_xlim(data[:, 0].min()-1, data[:, 0].max()+1)
-    ax.set_ylim(data[:, 1].min()-1, data[:, 1].max()+1)
+    ax.set_xlim(data[:, 0].min()-0.4, data[:, 0].max()+0.4)
+    ax.set_ylim(data[:, 1].min()-0.4, data[:, 1].max()+0.4)
     ax.set_xlabel('Haptic Fidelity Scores', fontsize = 14)
     ax.set_ylabel('Versatility Scores', fontsize = 14)
 
@@ -55,19 +63,19 @@ def optimal_kmeans(data, max_k=10):
     print(f"The optimal number of clusters is {optimal_n_clusters}.")
     
     # Plot the silhouette scores
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(7, 4))
     plt.plot(range_n_clusters, silhouette_scores, marker='o', linestyle='-', color='b')
-    plt.xlabel("Number of Clusters", fontsize=12)
-    plt.ylabel("Silhouette Score", fontsize=12)
+    plt.xlabel("Number of Clusters", fontsize=14)
+    plt.ylabel("Silhouette Score", fontsize=14)
     plt.grid(True)
-    plt.savefig('silhouette.pdf', format='pdf', bbox_inches='tight')
+    plt.savefig('figures/silhouette.pdf', format='pdf', bbox_inches='tight')
 
     plt.show()
 
     return optimal_n_clusters
 
 # Load data
-file_path = '/Users/christian/Documents/Literature-Research-Master-Thesis/literature_data.csv'
+file_path = '/Users/christian/Documents/Literature-Research-Master-Thesis/figures/literature_data.csv'
 data = pd.read_csv(file_path)
 
 # Impute missing values using the mean of each column
@@ -91,6 +99,6 @@ data['Cluster'] = final_kmeans.labels_
 # Plotting the clusters with Voronoi regions
 fig, ax = plt.subplots(figsize=(8, 8))
 plot_voronoi(final_kmeans, ax, X)
-plt.savefig('literature_data.pdf', format='pdf', bbox_inches='tight')
+plt.savefig('figures/literature_data.pdf', format='pdf', bbox_inches='tight')
 plt.show()
 

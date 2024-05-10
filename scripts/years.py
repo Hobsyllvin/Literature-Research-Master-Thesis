@@ -11,28 +11,28 @@ matplotlib.rcParams['font.family'] = 'STIXGeneral'
 csv_data = """Year,Amount
 2000,1
 2001,0
-2002,0
+2002,1
 2003,0
 2004,0
 2005,0
-2006,0
+2006,1
 2007,2
 2008,2
 2009,0
-2010,2
+2010,1
 2011,0
 2012,2
 2013,0
 2014,3
 2015,1
 2016,0
-2017,2
-2018,1
-2019,7
+2017,1
+2018,0
+2019,5
 2020,2
 2021,2
 2022,3
-2023,3
+2023,7
 2024,1"""
 
 # Read the data into a pandas DataFrame
@@ -64,7 +64,7 @@ plt.ylabel('Number of studies')
 plt.title('')
 
 plt.tight_layout()  # Adjust layout
-plt.savefig("years.pdf", format="pdf", bbox_inches="tight")
+plt.savefig("/Users/christian/Documents/Literature-Research-Master-Thesis/figures/years.pdf", format="pdf", bbox_inches="tight")
 plt.show()
 
 
