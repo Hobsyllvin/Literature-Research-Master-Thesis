@@ -40,11 +40,10 @@ Finally, the full-text articles were assessed to determine their eligibility for
 The search yielded a total of 404 results, which were saved in the library of Mendeley. 75 duplicates were found and removed. The remaining 329 records were screened based on title and abstract first. This led to the preliminary exclusion of 294 records, of which 73 records were re-screened as they were from the years 2022-2024 (see fig. \ref{fig:prisma}). 
 Additionally, 2 papers were included based on citation search. 
 
-In total, 44 articles were full-text screened. Out of these, 7 were excluded based on the exclusion criteria described in \ref{sec:eligibility}, and the remaining 34 studies were included in this review.
+In total, 44 articles were full-text screened. Out of these, 7 were excluded based on the exclusion criteria, and the remaining 34 studies were included in this review.
 
 
 \subsection{Study characteristics}
-
 \subsubsection{Year of publication}
 The year of publication of the included studies ranges from 2000 to 2024. As seen in \ref{fig:years}, the number of studies has greatly increased in the past decade, with a peak in 2018.
 
@@ -55,12 +54,23 @@ The year of publication of the included studies ranges from 2000 to 2024. As see
     \label{fig:years}
 \end{figure} 
 
-\subsubsection{\struct{Body parts involved}}
-Make graph to quantify which body parts are involved in which paper (make pie chart).
+
+\subsubsection{Body parts involved}
+\begin{itemize}
+    \item Graph to quantify involved body parts (pie chart)
+\end{itemize}
 
 
 \section{Definitions}
-\subsection{\struct{Feedback Fidelity}}
+\subsection{Feedback Fidelity}
+\begin{itemize}
+    \item Mention other frameworks
+    \item Shortly explain other approaches
+    \item Introduce Muender Framework (the one I am using)
+    \item Reason for Muender Framework
+\end{itemize}
+
+\begin{comment}
 Feedback fidelity refers to the accuracy and realism of stimuli provided to the user when they are interacting with the virtual environment. 
 
 Several frameworks have been proposed to assess the feedback fidelity of the VE. They concentrate on either the physical attributes of the system (e.g. the FIFA framework developed by McMahan et al. \cite{McMahan2011ExploringGames}), aim to evaluate feedback fidelity through questionnaires (e. g. the haptics addition \cite{Boos2017ErweiterungHaptik} to the User Experience Questionnaire \cite{Laugwitz2008ConstructionQuestionnaire}), or focus on the effect of the system. Huang et al. for example suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring the skill from the virtual to the real environment \cite{Huang2006}.
@@ -71,15 +81,16 @@ It helps to evaluate a system's haptic feedback fidelity ranging from abstract t
 In this review paper, we extend the Haptic Feedback Fidelity Framework by a third axis, taking into account a quality score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have actually been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
 
 We then evaluate the selected articles described in section \ref{sec:methods}  based on this framework.
+\end{comment}
 
-\section{\struct{Framework}}
+\newpage
+\section{Framework}
 
 The framework is built on eight foundational factors, describing th features of a system and their value, and six limiting factors that negatively impact the perception. Each factor is rated on a 5-point Likert-scale (0-4).
 
-\subsection{\struct{Haptic Fidelity}}
-\subsubsection{\struct{Foundational Factors}}
-\paragraph{\struct{Body Location}}
-E.g. body parts involved.
+\subsection{Haptic Fidelity}
+\subsubsection{Foundational Factors}
+\paragraph{Body Location}
 \begin{comment}
 "The required refresh rate to provide realistic
 force feedback is commonly accepted to be at least 1,000 Hz.
@@ -102,49 +113,24 @@ the application." \cite{Coles2011TheArt}
 About latency and its impacts: \cite{Gourishetti2018PassiveFeedback}.
 Ballistic movements: rapid, involuntary movement which is motor programmed, and for which visual feedback is not possible \cite{Wall2000}.
 \end{comment}
+\paragraph{Body Area} 
+\paragraph{Stimuli}
+\paragraph{Magnitude}
+\paragraph{Sensory Integrity}
+\paragraph{Degrees of Freedom}
+\paragraph{Hardware Precision}
+\paragraph{Software Precision}
+According to \cite{Coles2011TheArt}, the minimum acceptable refresh rate must lie within the 550-600 Hz range, ... 
 
-\paragraph{\struct{Body Area}}
-E.g. body area involved. 
-\paragraph{\struct{Stimuli}}
-Etc.
-
-\paragraph{\struct{Magnitude}}
-Etc.
-
-\paragraph{\struct{Sensory Integrity}}
-Etc.
-
-\paragraph{\struct{Degrees of Freedom}}
-Etc.
-
-\paragraph{\struct{Hardware Precision}}
-Etc.
-
-\paragraph{\struct{Software Precision}}
-According to \cite{Coles2011TheArt}, the minimum acceptable refresh rate must lie within the 550-600 Hz range, ...
-
-\subsubsection{\struct{Limiting Factors}}
-Etc.
-
-\paragraph{\struct{Dependency}}
-Etc.
-
-\paragraph{\struct{Distinguishability}}
-Etc.
-
-\paragraph{\struct{Hardware Latency}}
-Latency of over 25ms, according to ...
-
-\paragraph{\struct{Software Latency}}
-Etc.
-
-\paragraph{\struct{Side Effects}}
-Etc.
-
-\paragraph{\struct{Constraints}}
-Etc.
-
-\subsection{\struct{Versatility}}
-
-\subsection{\struct{Quality score}}
-In total, there were 14 parameters which needed to be evaluated for each haptic feedback system. We calculated a score based on the percentage of parameters, that were not described in the paper itself, nor could be accessed through an internet research (example, calculation etc.).
+\subsubsection{Limiting Factors}
+\paragraph{Dependency}
+\paragraph{Distinguishability}
+\paragraph{Hardware Latency}
+%Latency of over 25ms, according to ...
+\paragraph{Software Latency}
+\paragraph{Side Effects}
+\paragraph{Constraints}
+\subsection{Versatility}
+Reference to framework by Muender \cite{Muender2022HapticReality}.
+\subsection{Quality score}
+In total, there were 14 parameters that needed to be evaluated for each haptic feedback system. We calculated a score based on the percentage of parameters, that were not described in the paper itself, nor could be accessed through internet research (example, calculation etc.).
