@@ -1,7 +1,8 @@
 %%%%% RESULTS %%%%%%
 \twocolumn
 
-\section{\struct{Results}}
+\section{Results}
+\label{sec:results}
 Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively.
 
 \begin{figure*}[htbp]
@@ -10,9 +11,16 @@ Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versati
     \label{fig:fidelity_plot}
 \end{figure*}
 
-\subsection{\struct{KMeans clustering}}
+\subsection{K-means clustering}
+\begin{itemize}
+    \item Explain k-means clustering and silhouette score
+\end{itemize}
 
-In order to structure the data, we clustered the evaluated systems using the KMeans algorithm. The optimal number of clusters was calculated based on the silhouette score \cite{Rousseeuw1987Silhouettes:Analysis} (see figure \ref{fig:silhouette}.
+In order to structure the data, we clustered the evaluated systems using the k-means algorithm. The optimal number of clusters was chosen based on the highest \textit{silhouette score} for $n<10$ (see figure \ref{fig:silhouette}), which is calculated the following \cite{Rousseeuw1987Silhouettes:Analysis}:
+\begin{enumerate}
+    \item Calculate the \textit{silhouette coefficient} for all instances equal to $(b-a) / max(a,b)$, where $a$ is the mean distance to the other instances in the same cluster, and $b$ is the mean distance to the instances of the next closest cluster.
+    \item Compute the mean \textit{silhouette coefficient} over all instances, which equals the \textit{silhouette score}.
+\end{enumerate}
 
 \begin{figure}[htbp]
     \centering
@@ -31,10 +39,14 @@ As can be seen in figure \ref{fig:kmeans}, the data was separated in 9 different
 \end{figure}
 
 
-\subsection{\struct{Evaluation of the clusters}}
+\subsection{Evaluation of the clusters}
+\begin{itemize}
+    \item Explain each cluster, describe differences and similarities
+\end{itemize}
+\begin{comment}
 Cluster I unites studies that have a relatively low haptic fidelity score, however they have a fairly high versatility. This is because ..., in the papers haptic feedback had this effect, ...
 
 Cluster IV and V concern studies with ...
-
+\end{comment}
 
 
