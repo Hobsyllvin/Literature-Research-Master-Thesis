@@ -1,9 +1,7 @@
 %%%%% RESULTS %%%%%%
-\twocolumn
-
 \section{Results}
 \label{sec:results}
-Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively.
+Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively (see section \ref{sec:quality}).
 
 \begin{figure*}[htbp]
     \input{figures/tikz_graphic}
@@ -12,10 +10,7 @@ Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versati
 \end{figure*}
 
 \subsection{K-means clustering}
-\begin{itemize}
-    \item Explain k-means clustering and silhouette score
-\end{itemize}
-
+% Explain k-means clustering and silhouette score
 In order to structure the data, we clustered the evaluated systems using the k-means algorithm. The optimal number of clusters was chosen based on the highest \textit{silhouette score} for $n<10$ (see figure \ref{fig:silhouette}), which is calculated the following \cite{Rousseeuw1987Silhouettes:Analysis}:
 \begin{enumerate}
     \item Calculate the \textit{silhouette coefficient} for all instances equal to $(b-a) / max(a,b)$, where $a$ is the mean distance to the other instances in the same cluster, and $b$ is the mean distance to the instances of the next closest cluster.
@@ -29,7 +24,7 @@ In order to structure the data, we clustered the evaluated systems using the k-m
     \label{fig:silhouette}
 \end{figure}
 
-As can be seen in figure \ref{fig:kmeans}, the data was separated in 9 different clusters. Each cluster center is depicted by a small blue dot.
+As can be seen in figure \ref{fig:kmeans}, the data was separated in 9 different clusters. Each cluster center is depicted by a small blue dot. As can be seen in figure \ref{fig:silhouette}, for a maximum number of $n=10$, the 
 
 \begin{figure}[htbp]
     \centering
@@ -40,9 +35,8 @@ As can be seen in figure \ref{fig:kmeans}, the data was separated in 9 different
 
 
 \subsection{Evaluation of the clusters}
-\begin{itemize}
-    \item Explain each cluster, describe differences and similarities
-\end{itemize}
+% Explain each cluster, describe differences and similarities
+
 \begin{comment}
 Cluster I unites studies that have a relatively low haptic fidelity score, however they have a fairly high versatility. This is because ..., in the papers haptic feedback had this effect, ...
 
