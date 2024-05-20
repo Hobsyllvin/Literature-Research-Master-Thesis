@@ -1,21 +1,50 @@
 %%%%% RESULTS %%%%%%
 \section{Results}
 \label{sec:results}
+
 Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively (see section \ref{sec:quality}).
 
+
+\subsection{Search Results}
+
+%%%% Rewrite for precise numbers!! %%%%%
+
+The search yielded 404 results, which were saved in the library of Mendeley. 75 duplicates were found and removed. The remaining 329 records were screened based on title and abstract first. This led to the preliminary exclusion of 290 records, of which 73 records were re-screened as they were from the years 2022-2024 (see fig. \ref{fig:prisma}), along with 3 papers that had been included based on citation search. 
+65 records were excluded during this screening.
+
+In total, 50 articles were eligible for the full-text screening. Of these, 14 were excluded based on the exclusion criteria, and the remaining 36 studies were included in this review.
+
+
+\subsubsection{Study characteristics}
+\paragraph{Year of publication}
+The year of publication of the included studies ranges from 2000 to 2024. As seen in \ref{fig:years}, the number of studies has greatly increased in the past decade, with a peak in 2018.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/years.pdf} 
+    \caption{Publication dates of the included articles}
+    \label{fig:years}
+\end{figure} 
+
+
+\paragraph{Body parts involved}
+\note{
+\begin{itemize}
+    \item Graph to quantify involved body parts (pie chart)
+\end{itemize}
+}
+
+
 \begin{figure*}[htbp]
-    \input{figures/tikz_graphic}
-    \caption{Haptic fidelity and versatility scores for the included papers}
-    \label{fig:fidelity_plot}
+\input{figures/tikz_graphic}
+\caption{Haptic fidelity and versatility scores for the included papers}
+\label{fig:fidelity_plot}
 \end{figure*}
 
-\subsection{K-means clustering}
-% Explain k-means clustering and silhouette score
-In order to structure the data, we clustered the evaluated systems using the k-means algorithm. The optimal number of clusters was chosen based on the highest \textit{silhouette score} for $n<10$ (see figure \ref{fig:silhouette}), which is calculated the following \cite{Rousseeuw1987Silhouettes:Analysis}:
-\begin{enumerate}
-    \item Calculate the \textit{silhouette coefficient} for all instances equal to $(b-a) / max(a,b)$, where $a$ is the mean distance to the other instances in the same cluster, and $b$ is the mean distance to the instances of the next closest cluster.
-    \item Compute the mean \textit{silhouette coefficient} over all instances, which equals the \textit{silhouette score}.
-\end{enumerate}
+
+\subsection{Search Analysis Results}
+
+\subsubsection{K-Means Clustering}
 
 \begin{figure}[htbp]
     \centering
@@ -24,23 +53,19 @@ In order to structure the data, we clustered the evaluated systems using the k-m
     \label{fig:silhouette}
 \end{figure}
 
-As can be seen in figure \ref{fig:kmeans}, the data was separated in 9 different clusters. Each cluster center is depicted by a small blue dot. As can be seen in figure \ref{fig:silhouette}, for a maximum number of $n=10$, the 
+As can be seen in figure \ref{fig:kmeans}, the data was separated into 9 different clusters. Each cluster center is depicted by a small blue dot. As can be seen in figure \ref{fig:silhouette}, for a maximum number of $n=10$, the 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\columnwidth]{figures/literature_data.pdf} 
-    \caption{KMeans clustering of the data}
+    \caption{K-means clustering of the data}
     \label{fig:kmeans}
 \end{figure}
 
 
-\subsection{Evaluation of the clusters}
+\subsubsection{Evaluation of the clusters}
 % Explain each cluster, describe differences and similarities
 
-\begin{comment}
-Cluster I unites studies that have a relatively low haptic fidelity score, however they have a fairly high versatility. This is because ..., in the papers haptic feedback had this effect, ...
-
-Cluster IV and V concern studies with ...
-\end{comment}
+\textbf{Cluster I} contains the articles by Hanashima et al. and H. Liu et al. \cite{Hanashima2023, LiuH2019}. Both systems have a relatively high versatility score, the haptic feedback however is rather abstract. The haptic feedback is exclusively generated through vibration. While the system developed by Hanashima et al. provides haptic feedback on the head and the waist to help the participants with posture learning, H. Liu et al. developed a glove-based system that gives feedback when grasping and lifting virtual objects. While H. Liu found a significantly improved success rate when grasping the objects under the condition of the haptic feedback, Hanashima et al. found the visual feedback only condition to be superior over the visuo-tactile condition. 
 
 

@@ -17,6 +17,12 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \usepackage[numbers,sort&compress]{natbib}
 
+\makeatletter
+\newcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}%
+  {-1.25ex\@plus -1ex \@minus -.2ex}%
+  {0.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
 
 % Some colors
 \definecolor{c1}{RGB}{84, 156, 22}
