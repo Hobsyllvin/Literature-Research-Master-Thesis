@@ -24,6 +24,7 @@ def plot_voronoi(kmeans, ax, data):
     # Scatter plot of the data points
     ax.scatter(data[:, 0], data[:, 1], s=30, c='#000000')
     
+    '''
     # Roman numerals for labeling clusters from I to VIII
     roman_numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
     
@@ -39,6 +40,7 @@ def plot_voronoi(kmeans, ax, data):
     plt.text(3.61, 0.2, 'IX', fontsize=14, ha='center', va='center', color='black')
     plt.text(2.52, 1.2, 'X', fontsize=14, ha='center', va='center', color='black')
     plt.text(1.01, 2.2, 'XI', fontsize=14, ha='center', va='center', color='black')
+    '''
 
     # Set plot limits
     ax.set_xlim(data[:, 0].min()-0.4, data[:, 0].max()+0.4)
@@ -93,7 +95,7 @@ def plot_silhouette(data, n_clusters):
     plt.show()
 
 
-def optimal_kmeans(data, max_k=10):
+def optimal_kmeans(data, max_k=4):
     silhouette_scores = []
     range_n_clusters = range(2, max_k + 1)
     
@@ -128,7 +130,7 @@ def optimal_kmeans(data, max_k=10):
     plt.xlabel("Number of Clusters", fontsize=14)
     plt.ylabel("Silhouette Score", fontsize=14)
     plt.grid(True)
-    plt.savefig('figures/silhouette_9.pdf', format='pdf', bbox_inches='tight')
+    plt.savefig('figures/silhouette_5.pdf', format='pdf', bbox_inches='tight')
     plt.show()
 
     return optimal_n_clusters
@@ -158,7 +160,7 @@ data['Cluster'] = final_kmeans.labels_
 # Plotting the clusters with Voronoi regions
 fig, ax = plt.subplots(figsize=(8, 8))
 plot_voronoi(final_kmeans, ax, X)
-plt.savefig('figures/k_means_9.pdf', format='pdf', bbox_inches='tight')
+plt.savefig('figures/k_means_4.pdf', format='pdf', bbox_inches='tight')
 plt.show()
 
 # Plot silhouette diagrams for various values of k
