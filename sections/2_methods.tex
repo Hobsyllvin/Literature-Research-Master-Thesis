@@ -150,12 +150,21 @@ We divided the papers into four groups based on the quality score :
 \vspace{5mm}
 For this systematic review, we evaluate the selected articles described in section \ref{sec:methods}  based on this framework. This will help to create a dataset with transparent methods to overcome the sometimes opaque classification of haptic fidelity by researchers, that base the level of fidelity on few or no factors at all (e.g. \cite{Grant2019}). 
 
+\subsubsection{Clustering of the data}
+To classify the data based on haptic fidelity and versatility, we divide each attribute into three categories. We therefore organize the dataset into a 3x3 grid, resulting in a total of 9 fields. Each axis is evenly split at intervals of $k \frac{4}{3}$, as the entire scale ranges from 0 to 4 on both axes.
 
-\subsubsection{K-Means Clustering}
-\note{Explanation of k-means algorithm and silhouette score}
-% Explain k-means clustering and silhouette score
-To structure the data, we cluster the evaluated systems using the k-means algorithm. The optimal number of clusters is chosen based on the highest \textit{silhouette score}, and the calculation is stopped if the score is lower than a previous maximum for five consecutive runs (see figure \ref{fig:silhouette}). The \textit{silhouette score} is obtained using the following calculation \cite{Rousseeuw1987Silhouettes:Analysis}:
-\begin{enumerate}
-    \item Calculate the \textit{silhouette coefficient} for all instances equal to $(b-a) / max(a,b)$, where $a$ is the mean distance to the other instances in the same cluster, and $b$ is the mean distance to the instances of the next closest cluster.
-    \item Compute the mean \textit{silhouette coefficient} over all instances, which equals the \textit{silhouette score}.
-\end{enumerate}
+\subsubsection{Impact on motor learning}
+% Based on p-score and findings (strong evidence ...)
+% Evidence Score for motor learning ++ + o - -- 
+
+To evaluate the impact of haptic feedback fidelity on motor learning for each paper, we assign a score based on the findings provided:
+
+\begin{itemize}
+\item \textbf{++}: Papers showing a significant positive impact on motor learning, with all p-values indicating significance for the haptic feedback condition.
+\item \textbf{+}: Papers showing a moderate positive impact on motor learning.
+\item \textbf{o}: Papers showing no difference in motor learning compared to other conditions.
+\item \textbf{-}: Papers showing a moderate negative impact on motor learning.
+\item \textbf{--}: Papers providing strong evidence that haptic feedback led to worse performance, with significant p-values indicating a negative impact on motor learning.
+\end{itemize}
+
+For some papers, the impact was not clear (e.g., no p-values were provided). For these papers, an impact score on motor learning was assumed, and this is marked in the figure by an asterisk (*).
