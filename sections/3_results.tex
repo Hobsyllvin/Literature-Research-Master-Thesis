@@ -1,5 +1,5 @@
 %%%%% RESULTS %%%%%%
-\section{Results}
+t\section{Results}
 \label{sec:results}
 
 Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively (see section \ref{sec:quality}).
@@ -17,7 +17,7 @@ In total, 50 articles were eligible for the full-text screening. Of these, 14 we
 
 \subsubsection{Study characteristics}
 \paragraph{Year of publication}
-The year of publication of the included studies ranges from 2000 to 2024. As seen in \ref{fig:years}, the number of studies has greatly increased in the past decade, with a peak in 2018.
+The included studies' publication dates from 2000 to 2024. As seen in \ref{fig:years}, the number of studies has greatly increased in the past decade, with a peak in 2018.
 
 \begin{figure}[htbp]
     \centering
@@ -25,8 +25,6 @@ The year of publication of the included studies ranges from 2000 to 2024. As see
     \caption{Publication dates of the included articles}
     \label{fig:years}
 \end{figure} 
-
-
 
 
 \paragraph{Body parts involved}
@@ -41,46 +39,40 @@ Figure \ref{fig:body_parts_pie} shows which body parts were involved in the stud
     \label{fig:body_parts_pie}
 \end{figure} 
 
+\subsection{Search Analysis Results}
+
+\subsubsection{Clustering of the data}
+The papers were evaluated based on the haptic fidelity framework by Muender et al. \cite{Muender2022HapticReality} and plotted based on their haptic fidelity and versatility score as can be seen in figure \ref{fig:fidelity_plot}. The plot also shows the different confidence scores based on the quality of the papers. 
 
 \begin{figure*}[htbp]
-\input{figures/tikz_graphic}
+\input{figures/tikz_fidelity}
 \caption{Haptic fidelity and versatility scores for the included papers}
 \label{fig:fidelity_plot}
 \end{figure*}
 
+As shown in figure \ref{fig:fidelity_plot}, the data is separated into 9 equally sized clusters, which will be evaluated in section \ref{sec:evaluation_clusters}.
 
-\subsection{Search Analysis Results}
 
-\subsubsection{K-Means Clustering}
+\subsubsection{Impact on motor learning}
+The papers were evaluated based on the impact of the haptic feedback on motor learning (see section \ref{sec:impact_motor_learning}) and displayed in figure \ref{fig:motorlearning_plot}.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\columnwidth]{figures/silhouette_11.pdf} 
-    \caption{Silhouette scores for the numbers of clusters}
-    \label{fig:silhouette}
-\end{figure}
-
-As can be seen in figure \ref{fig:kmeans}, the data was separated into 9 different clusters. A small blue dot depicts each cluster center. As can be seen in figure \ref{fig:silhouette}, for a maximum number of $n=10$, the 
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\columnwidth]{figures/k_means_11.pdf} 
-    \caption{K-means clustering of the data, n=11}
-    \label{fig:kmeans}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=\columnwidth]{figures/k_means_5.pdf} 
-    \caption{K-means clustering of the data, n=5}
-    \label{fig:kmeans}
-\end{figure}
+\begin{figure*}[htbp]
+\input{figures/tikz_motorlearning}
+\caption{Motor learning scores for the included papers}
+\label{fig:motorlearning_plot}
+\end{figure*}
 
 
 
 \subsubsection{Evaluation of the clusters}
-% Explain each cluster, describe differences and similarities
+\label{sec:evaluation_clusters}
+\paragraph{Specific + Abstract}
+\label{sec:specificabstract}
+% Explain each cluster, and describe differences and similarities 
+In the experiment conducted by I. Lee et al \cite{Lee2012} the participants were taught a drumming task at three different tempos. Haptic feedback was provided through vibrations on the drumstick. Given that the haptic device is integrated into the drumstick, its versatility is limited, as it can only be used for various drumming activities. Additionally, the haptic fidelity is rated low and considered abstract. This is because the vibrational feedback delivered to the hand differs in modality from the expected outcome. Specifically, while the feedback consists of vibrations, the expected response from the participant involves a unidirectional motion. Also, the authors reported the vibrations of the drumstick itself to mask the vibrational feedback, which results in a lower haptic feedback fidelity. The effect on motor learning is negative, as visual and auditory feedback were more effective at higher frequencies (115bpm and 200bpm) for learning the drumming task (see figure \ref{fig:motorlearning_plot}).
 
-\textbf{Cluster I} contains the articles by Hanashima et al. and H. Liu et al. \cite{Hanashima2023, LiuH2019}. Both systems have a relatively high versatility score, the haptic feedback however is rather abstract. The haptic feedback is exclusively generated through vibration. While the system developed by Hanashima et al. provides haptic feedback on the head and the waist to help the participants with posture learning, H. Liu et al. developed a glove-based system that gives feedback when grasping and lifting virtual objects. While H. Liu found a significantly improved success rate when grasping the objects under the condition of the haptic feedback, Hanashima et al. found the visual feedback only condition to be superior over the visuo-tactile condition. 
+
+
+\textbf{wfe} contains the articles by Hanashima et al. and H. Liu et al. \cite{Hanashima2023, LiuH2019}. Both systems have a relatively high versatility score, the haptic feedback however is rather abstract. The haptic feedback is exclusively generated through vibration. While the system developed by Hanashima et al. provides haptic feedback on the head and the waist to help the participants with posture learning, H. Liu et al. developed a glove-based system that gives feedback when grasping and lifting virtual objects. While H. Liu found a significantly improved success rate when grasping the objects under the condition of the haptic feedback, Hanashima et al. found the visual feedback only condition to be superior over the visuo-tactile condition. 
 
 
