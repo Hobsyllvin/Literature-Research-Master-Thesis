@@ -6,12 +6,15 @@ from sklearn.impute import SimpleImputer
 import matplotlib.pyplot as plt
 from scipy.spatial import Voronoi, voronoi_plot_2d
 from tqdm import tqdm
+import matplotlib.font_manager
+print(matplotlib.font_manager.findSystemFonts(fontpaths=None, fontext='ttf'))
+
 
 
 plt.rcParams.update({
     "text.usetex": False,
     "font.family": "serif",
-    "font.serif": ["Times"],  # or 'Times', 'Palatino', etc.
+    "font.serif": ["times new roman"],  # or 'Times', 'Palatino', etc.
 })
 
 def plot_voronoi(kmeans, ax, data):
@@ -24,7 +27,7 @@ def plot_voronoi(kmeans, ax, data):
     # Scatter plot of the data points
     ax.scatter(data[:, 0], data[:, 1], s=30, c='#000000')
     
-    '''
+    
     # Roman numerals for labeling clusters from I to VIII
     roman_numerals = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
     
@@ -40,7 +43,7 @@ def plot_voronoi(kmeans, ax, data):
     plt.text(3.61, 0.2, 'IX', fontsize=14, ha='center', va='center', color='black')
     plt.text(2.52, 1.2, 'X', fontsize=14, ha='center', va='center', color='black')
     plt.text(1.01, 2.2, 'XI', fontsize=14, ha='center', va='center', color='black')
-    '''
+    
 
     # Set plot limits
     ax.set_xlim(data[:, 0].min()-0.4, data[:, 0].max()+0.4)
@@ -95,7 +98,7 @@ def plot_silhouette(data, n_clusters):
     plt.show()
 
 
-def optimal_kmeans(data, max_k=4):
+def optimal_kmeans(data, max_k=100):
     silhouette_scores = []
     range_n_clusters = range(2, max_k + 1)
     
@@ -130,13 +133,13 @@ def optimal_kmeans(data, max_k=4):
     plt.xlabel("Number of Clusters", fontsize=14)
     plt.ylabel("Silhouette Score", fontsize=14)
     plt.grid(True)
-    plt.savefig('figures/silhouette_5.pdf', format='pdf', bbox_inches='tight')
+    plt.savefig('./figures/silhouette.pdf', format='pdf', bbox_inches='tight')
     plt.show()
 
     return optimal_n_clusters
 
 # Load data
-file_path = '/Users/christian/Documents/Literature-Research-Master-Thesis/figures/literature_data.csv'
+file_path = 'C:\\Users\\chris\\OneDrive\\Dokumente\\TU_Delft\\Literature-Research-Master-Thesis\\figures\\literature_data.csv'
 data = pd.read_csv(file_path)
 
 # Impute missing values using the mean of each column
