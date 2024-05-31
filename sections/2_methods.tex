@@ -132,19 +132,19 @@ In the following, the \textit{limiting factors} are described.
 
 
 \paragraph{Versatility}
-The versatility is assessed on a 5-point Likert scale with 0 for very specific systems that can only be used for one scenario, and 4 for systems that can produce very generic haptic feedback. For the classification, we follow the example categories provided by Muender et al. \cite{Muender2022HapticReality}.
+The versatility is assessed on a 5-point Likert scale with 0 for very specific systems that can only be used for one scenario and 4 for systems that can produce very generic haptic feedback. For the classification, we follow the example categories provided by Muender et al. \cite{Muender2022HapticReality}.
 
 
-\paragraph{Quality Score}
-\label{sec:quality}
+\paragraph{Confidence Score}
+\label{sec:confidence}
 In total, 14 parameters needed to be evaluated for each haptic feedback system. We calculated a score based on the percentage of factors, that were not described in the paper itself, nor could be accessed through internet research (e.g. by looking up the specifications for the commercial products).
 We divided the papers into four groups based on the quality score :
 
 \begin{enumerate}
-	\item High quality: $q > 0.9$
-	\item Good quality: $0.8 < q \leq 0.9$
-	\item Medium quality: $0.7 < q \leq 0.8$
-	\item Low quality: $q \leq 0.7$
+	\item High confidence: $C > 0.9$
+	\item Good confidence: $0.8 < C \leq 0.9$
+	\item Medium confidence: $0.7 < C \leq 0.8$
+	\item Low confidence: $C \leq 0.7$
 \end{enumerate} 
 
 \vspace{5mm}
@@ -152,6 +152,8 @@ For this systematic review, we evaluate the selected articles described in secti
 
 \subsubsection{Clustering of the Data}
 To classify the data based on haptic fidelity and versatility, we divide each attribute into three categories. We therefore organize the dataset into a 3x3 grid, resulting in a total of 9 fields. Each axis is evenly split at intervals of $k \frac{4}{3}$, as the entire scale ranges from 0 to 4 on both axes.
+
+For mid-fidelity haptic feedback, which is neither entirely abstract nor fully realistic, we introduce the term \textit{representational}. For medium versatility, which is neither highly specific to one use case nor entirely generic, we use the term \textit{broad}.
 
 \subsubsection{Evaluating the Impact on Motor Learning}
 \label{sec:impact_motor_learning}
@@ -168,4 +170,4 @@ To evaluate the impact of haptic feedback fidelity on motor learning for each pa
 \item \textbf{--}: Papers providing strong evidence that haptic feedback led to worse performance, with significant p-values indicating a negative impact on motor learning.
 \end{itemize}
 
-For some papers, the impact was not clear (e.g., no p-values were provided). For these papers, an impact score on motor learning was assumed, and this is marked in the figure by an asterisk (*).
+For some papers, the impact was not clear (e.g., no p-values were provided). For these papers, an impact score on motor learning was assumed, and this is marked in the figure by data points containing a white mark in the center.

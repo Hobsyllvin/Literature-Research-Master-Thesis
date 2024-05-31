@@ -1,8 +1,8 @@
 %%%%% RESULTS %%%%%%
-t\section{Results}
+\section{Results}
 \label{sec:results}
 
-Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively (see section \ref{sec:quality}).
+Figure \ref{fig:fidelity_plot} displays the haptic feedback fidelity and versatility scores of the systems described in each article. The quality score of each system is depicted by the dot's color and size, respectively (see section \ref{sec:confidence}).
 
 
 \subsection{Search Results}
@@ -66,13 +66,76 @@ The papers were evaluated based on the impact of the haptic feedback on motor le
 
 \subsubsection{Evaluation of the clusters}
 \label{sec:evaluation_clusters}
-\paragraph{Specific + Abstract}
-\label{sec:specificabstract}
 % Explain each cluster, and describe differences and similarities 
+
+\paragraph{Abstract + Specific} \label{sec:abstractspecific}
 In the experiment conducted by I. Lee et al \cite{Lee2012} the participants were taught a drumming task at three different tempos. Haptic feedback was provided through vibrations on the drumstick. Given that the haptic device is integrated into the drumstick, its versatility is limited, as it can only be used for various drumming activities. Additionally, the haptic fidelity is rated low and considered abstract. This is because the vibrational feedback delivered to the hand differs in modality from the expected outcome. Specifically, while the feedback consists of vibrations, the expected response from the participant involves a unidirectional motion. Also, the authors reported the vibrations of the drumstick itself to mask the vibrational feedback, which results in a lower haptic feedback fidelity. The effect on motor learning is negative, as visual and auditory feedback were more effective at higher frequencies (115bpm and 200bpm) for learning the drumming task (see figure \ref{fig:motorlearning_plot}).
 
+\paragraph{Abstract + Broad} \label{sec:abstractbroad}
+The cluster for broad versatility and abstract haptic feedback fidelity also contains one study only, which was conducted by Marchal-Crespo et al. \cite{Marchal-Crespo2009ReviewInjury}. Participants were learning to bounce a ball using a racket in a virtual environment. The self-built haptic device achieved a low haptic fidelity score, as the movement of the racket was constrained to one degree of freedom, and the reported sensor noise and friction reduced precision and accuracy. Furthermore, the handle of the device was held in a position orthogonal to the forearm, whereas the handle of the racket shown in the VE was parallel to the user's forearm. As the device could be used for different bouncing activities, the versatility is considered broad. Marchal-Crespo et al. observed a positive effect of fixed guidance with a haptic device on discrete timing tasks and a negative effect on rhythmic tasks with low dwell times (e.g. when the ball was bounced at higher frequencies) \cite{Crespo2015}.
+
+\paragraph{Abstract + Generic} \label{sec:abstractgeneric}
+The participants in the study conducted by Hanashima et al. were asked to learn five different postures under three conditions: \textit{(i)} from looking at images, \textit{(ii)} with visual feedback, \textit{(iii)} with visuotactile feedback for correct and \textit{(iv)} with visuotactile feedback for incorrect movement \cite{Hanashima2023}. The haptic system was self-built, containing 3 vibration motors on the head and 2 on the waist. As the task involved whole-body movements, but the feedback was only provided on the waist and the head in the form of vibration, the haptic fidelity is low. As the form of feedback can be provided for a great variety of tasks, the system got a high versatility score. 
+Hanashima et al. found no significant differences in learning accuracy between feedback modalities or presentation methods of vibrotactile feedback. Nonetheless, subjects found it easiest to learn when provided with tactile feedback for correct movements.
 
 
-\textbf{wfe} contains the articles by Hanashima et al. and H. Liu et al. \cite{Hanashima2023, LiuH2019}. Both systems have a relatively high versatility score, the haptic feedback however is rather abstract. The haptic feedback is exclusively generated through vibration. While the system developed by Hanashima et al. provides haptic feedback on the head and the waist to help the participants with posture learning, H. Liu et al. developed a glove-based system that gives feedback when grasping and lifting virtual objects. While H. Liu found a significantly improved success rate when grasping the objects under the condition of the haptic feedback, Hanashima et al. found the visual feedback only condition to be superior over the visuo-tactile condition. 
+\paragraph{Representational + Specific} \label{sec:representationalspecific}
+Najdovski et al. developed a pinch-grasp haptic interface connected to a commercially available Sensable Omni device \cite{Najdovski2020}. The haptic interface, limited to grasping and pinching objects in VR with two fingers, offers rather specific versatility. The constraints in movement imposed on the user by the system and the limited amount of stimuli that are provided compared to the ones that the user would feel in the natural occurrence of the task reduce haptic fidelity. 
+In the experiments, participants were asked to discriminate the size and stiffness of virtual objects. Accuracy in both size and stiffness discrimination was higher with combined haptic and visual feedback compared to visual feedback alone. Additionally, response times for the stiffness discrimination task were shorter with haptic feedback. Although no p-values were provided, the authors reported a generally positive impact of haptic feedback on the motor task, suggesting a beneficial effect on motor learning for this type of feedback in such tasks. 
+
+
+\paragraph{Representational + Broad} \label{sec:representationalbroad}
+The haptic fidelity in the three studies in this field can be classified as representational, and the haptic systems are fairly versatile, offering applications in a wide range of tasks. The experiments employed haptic devices for the arm or hand: a tendon-driven Olympic hand with participants guided at their forearm by a robotic arm \cite{Chappell2022}, the commercially available Novint Falcon \cite{Gambaro2014}, and a one-degree-of-freedom dual wrist interface \cite{Perez2023} developed by Melendez-Calderon et al. \cite{Melendez-Calderon2011Hi5:Control}.
+
+While Chappell et al. and Peña-Perez et al. instructed participants to grasp virtual objects, Gambaro et al.'s experiment involved following a trajectory in 2D. Gambaro et al. reported a positive impact of vibrotactile feedback on task performance, although the results were not statistically significant. 
+Chappell et al. found a significant increase in the performance of the participants who had trained with the robot-enhanced platform compared to the participants who had trained in VR without haptic feedback. However, the final performance on a more complex pick-and-place task of the robot-enhanced group was comparable to a control group with no prior training. 
+
+Finally, Peña-Perez et al. found better tracking accuracy with higher object stiffness when participants grasped a virtual object and tracked a moving target horizontally, but worse performance with lower stiffness values.
+
+
+\paragraph{Representational + Generic} \label{sec:representationalgeneric}
+Six papers feature a haptic device that provides mid-fidelity haptic feedback and has a high versatility score, meaning it can be used for a great variety of use cases and tasks. The systems used are either self-built wearable systems such as a glove \cite{LiuH2019, Trinitatova2023} or a haptic suit with vibration motors \cite{Xia2023}, or the commercially available controller HTC Vive \cite{Vasudevan2020, Yang2023, McAnally2023}. Since this controller offers very generic haptic feedback, it has the highest versatility rating. 
+The tasks utilizing the wearable systems can be classified as trajectory following in 3D (\cite{Trinitatova2023, Xia2023}) and grasping and lifting (\cite{LiuH2019}). The experiments with the HTC Vive controller shared the requirement of discrete movements, with two involving Fitts' tapping task \cite{Fitts1954TheMovement}. All studies employed state-of-the-art head-mounted displays (HMDs) with high resolution and refresh rates, as they were conducted within the last five years.
+
+For all studies, a positive impact of haptic feedback on motor learning has been found, for two even being significant (\cite{LiuH2019, Yang2023}). Furthermore, the haptic feedback was able to reduce mental demand (\cite{Trinitatova2023, Yang2023}).
+
+\paragraph{Realistic + Specific} \label{sec:realisticspecific}
+
+The studies in this field use haptic devices that provide realistic feedback specific to a particular use case. All systems offer haptic feedback to the fingers or arm.
+
+A shared finding among these studies is the positive impact of haptic feedback on motor learning. An exception is the study by Vaghela et al., which compared two arthroscopy simulators: one with active haptic feedback using vibration or resistance via servo motors, and the other with passive feedback using an artificial knee anatomy model \cite{Vaghela2021}. While the passive feedback system realistically represented reality and helped surgeons clearly understand how to improve their motor performance, the active feedback system did not achieve the same level of clarity. Despite its lower haptic fidelity, the active feedback system was more versatile, as the system could be used for providing haptic feedback for different operations at the knee.
+
+The studies by Graham, F. C. Huang et al., and Vaghela et al. all involved virtual environments that are exact replicas of real-world systems \cite{Graham2008, Huang2006, Vaghela2021}. These systems provide very realistic feedback, with the provided stimuli exactly matching the expected stimuli in the virtual environment. However, these systems are specific to one variation of a particular use case, resulting in a versatility score of zero. Huang et al., who asked participants to rotate a beam to roll a ball to a target position, found significantly better skill transfer from the virtual system to the real system for participants trained with haptic feedback compared to those trained with visual feedback only. The vision-only group experienced a significant increase in task completion time, whereas the vision-haptics group had little to no increase in task completion time during the evaluation. Graham also found a positive impact of haptic feedback on motor learning, however the results were not as salient. In the study he conducted, in which participants had to learn a rhythmic pattern using a drumstick, the haptic condition was found to be effective at reducing the velocity error, especially for the recall. However, the haptic feedback alone was inferior in motor performance to the audio-haptic condition. 
+
+Liu et al., Macuga et al., and Mohanty et al. also used custom-built systems in their experiments, that were replicated in the virtual environment: a tank gun interface for training tank gunners \cite{LiuG2014}, an adapted electric mobility vehicle for trajectory following \cite{Macuga2019}, and 3D-printed pegs and holes \cite{Mohanty2023}. These systems could be used for other variations of the same task, achieving a versatility score of one. All three studies showed a positive effect of congruent haptic feedback on motor learning. 
+Liu et al. found significant improvements in both speed and accuracy for most participants, although some participants only improved in operation time, not accuracy, with haptic feedback. Macuga et al. demonstrated improved task performance when the inertia felt while steering the vehicle was congruent with the vehicle movements.  
+Macuga et al., who asked participants to follow a 2D trajectory with an adapted electric vehicle, found improved task performance when the inertia felt while steering the vehicle was congruent with the vehicle movements. However, the group with a reverse visual-inertial gain (steering right while the vehicle moved right in VR but left in reality) took the longest to adapt and never reached the performance level of the groups experiencing correct-direction inertial forces, whether half, normal, or double. 
+Mohanty et al. observed enhanced precision in the peg-in-hole task under conditions with haptic feedback. However, they faced challenges in blending visual and tactile information, which became evident with tracking errors of 3-5 degrees. In the representative condition, where haptic feedback was provided by the 3D-printed parts and visual information was shown only on a display, these challenges led to increased task completion times and participant frustration.
+
+The experiments conducted by Fehlberg et al. involved six conditions, five of which were very specific in their use case and are therefore placed in this field. Participants had to track a target line as quickly and accurately as possible using an Omni Stylus. In these five conditions, motion was supported by the following:
+\begin{enumerate}
+    \item an active handrest with cobot fixture (fidelity score 3.34),
+    \item an active handrest with an adaptive admittance strategy where the admittance gain was adjusted by the time derivative of the force input (fidelity score 3.34),
+    \item an active handrest with look-ahead fixture (fidelity score 3.22),
+    \item an active handrest with virtual-spring fixture on Omni Stylus (fidelity score 3.62),
+    \item and an active handrest with virtual-spring fixture on the active handrest (fidelity score 3.34).
+\end{enumerate}
+Compared to the baseline condition (freehand without fixtures), subjects significantly improved their performance and significantly decrease the maximum error in all haptic feedback conditions. The best performance improvement was observed with the active handrest combined with a virtual spring fixture on the handrest. The highest feedback fidelity was achieved when the virtual spring fixtures were provided on the Omni Stylus device itself. 
+
+The study conducted by S. C. Shamsunder and M. Manivannan provided very little information about their experiment, leading to a confidence score of $C = 0.64$. Also, the authors did not provide p-values or other statistical metrics for the evaluation of the haptic feedback condition.
+
+H. Lee et al. evaluated the effectiveness of hybrid haptic assistance, which gradually shifts from haptic guidance to haptic disturbance, on the learning and retention of steering skills. Their findings suggest that hybrid haptic assistance and progressive haptic guidance are advantageous for the immediate retention of learned steering skills, indicating that haptic feedback can facilitate initial learning and short-term retention \cite{LeeH2014}. 
+
+Grant et al. \cite{Grant2019} investigated the task of drilling 2 cm into wood and found that haptic feedback resulted in smaller absolute errors. This was characterized by the absence of overshoot, leading to a better movement economy, as correcting undershoot requires less energy than correcting overshoot \cite{Grant2019}.
+
+
+\paragraph{Realistic + Broad} \label{sec:realisticbroad}
+
+\paragraph{Realistic + Generic} \label{sec:realisticgeneric}
+
+
+
+
+% \textbf{Cluster I} contains the articles by Hanashima et al. and H. Liu et al. \cite{Hanashima2023, LiuH2019}. Both systems have a relatively high versatility score, the haptic feedback however is rather abstract. The haptic feedback is exclusively generated through vibration. While the system developed by Hanashima et al. provides haptic feedback on the head and the waist to help the participants with posture learning, H. Liu et al. developed a glove-based system that gives feedback when grasping and lifting virtual objects. While H. Liu found a significantly improved success rate when grasping the objects under the condition of the haptic feedback, Hanashima et al. found the visual feedback only condition to be superior over the visuo-tactile condition. 
 
 
