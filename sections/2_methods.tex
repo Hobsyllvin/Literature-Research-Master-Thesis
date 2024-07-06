@@ -2,14 +2,13 @@
 
 \begin{figure*}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{figures/prisma_overview.png} 
+    \includesvg[width=\linewidth]{figures/prisma_overview.svg} 
     \caption{Overview of the methodology using the PRISMA method}
     \label{fig:prisma}
-\end{figure*} 
+\end{figure*}
 
 \section{Methods}
 \label{sec:methods}
-
 This systematic review is conducted utilizing the PRISMA methodology \cite{Page2021TheReviews} to ensure transparent and complete reporting of the topics examined.
 
 \subsection{Search Strategy}
@@ -20,11 +19,13 @@ Several relevant articles were reviewed at the beginning to find eligible search
 The final search query was as follows: motor AND (learning OR control OR training OR skills) AND (((virtual OR augmented) AND reality) OR ((remote OR virtual OR simulated) AND environment)) AND (((somatosensory OR haptic OR tactile OR proprioceptive OR kinesthetic OR cutaneous OR somatic) AND 
 (cue* OR feedback OR rendering OR stimul*)) AND (fidelity OR realism OR accuracy OR precision OR exactness OR specificity)). The search terms were applied for the article title, abstract, and keywords.
 
-Three databases (Scopus, IEEE Xplore, and PubMed) were searched in April 2024. Based on the required syntax of each database, the search query was slightly adapted. For example, as PubMed only allows for the use of an asterisk for words containing more than three letters, the term \textit{cue*} was changed to (\textit{cue} OR \textit{cues}). The exact search queries can be found in \ref{sec:queries}. 
+Three databases (Scopus, IEEE Xplore, and PubMed) were searched in April 2024. Based on the required syntax of each database, the search query was slightly adapted. For example, as PubMed only allows for the use of an asterisk for words containing more than three letters, the term \textit{cue*} was changed to (\textit{cue} OR \textit{cues}). The exact search queries can be found in Appendix \ref{sec:queries}. 
+
+The results were saved in the library of Mendeley (v2.112.0) by Elsevier, NL, in April 2024, which was also used for the automatic removal of duplicates. 
 
 \subsubsection{Eligibility Criteria}
 \label{sec:eligibility}
-To qualify for inclusion, studies had to focus on the impact of somatosensory feedback on motor learning in humans. We included studies with healthy participants only, as motor-impaired patients often know how to perform a movement but are physically constrained by their condition, therefore augmented feedback may help the motor learning of patients in a different way compared to healthy subjects \cite{Sigrist2013AugmentedReview}. There were no publication date or language limits.
+To qualify for inclusion, studies had to focus on the impact of somatosensory feedback on motor learning in humans. We included studies with healthy participants only, as motor-impaired patients often know how to perform a movement but are physically constrained by their condition, therefore augmented feedback may help the motor learning of patients in a different way compared to healthy subjects \cite{Sigrist2013AugmentedReview}. There were no publication date or language limitations.
 
 Conversely, studies were excluded if they (i) did not relate to motor learning in humans; (ii) focused on systems not providing haptic feedback in VR; (iii) were concerned with a neurological condition affecting motor learning; or (iv) explained a new assessment system for the evaluation of motor learning.
 
@@ -39,7 +40,9 @@ Finally, the full-text articles were assessed to determine their eligibility for
 \subsection{Search Analysis}
 \subsubsection{Haptic Feedback Fidelity Framework}
 
-Feedback fidelity refers to the accuracy and realism of stimuli provided to the user when they are interacting with the virtual environment. 
+
+The fidelity of a system describes the objective degree of exactness in its output \cite{McMahan2011ExploringGames}. 
+In the context of haptic feedback, this refers to the ability to generate accurate and realistic stimuli that align with user expectations based on real-world experiences during interactions with a virtual environment \cite{Muender2022HapticReality}. 
 
 Several frameworks have been proposed to assess the feedback fidelity of the VE. They concentrate on either the physical attributes of the system (e.g. the FIFA framework developed by McMahan et al. \cite{McMahan2011ExploringGames}), aim to evaluate feedback fidelity through questionnaires (e.g. the haptics addition \cite{Boos2017ErweiterungHaptik} to the User Experience Questionnaire \cite{Laugwitz2008ConstructionQuestionnaire}) or focus on the effect of the system. Huang et al. for example suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring a skill from the virtual to the real environment \cite{Huang2006}.
 
@@ -47,17 +50,15 @@ These frameworks, while addressing particular subjective and objective dimension
 
 The evaluation of haptic feedback fidelity is based on eight foundational factors, describing the features of a system and their value, and six limiting factors that negatively impact the perception. Each factor is rated on a 5-point Likert scale (0-4). 
 
-For this systematic review, we evaluate the selected articles described in section \ref{sec:methods}  based on this framework. This will help to create a dataset with transparent methods to overcome the sometimes opaque classification of haptic fidelity by researchers, that base the level of fidelity on few or no factors at all (e.g. \cite{Grant2019, Yang2023}). 
-We extend the framework by a third axis, taking into account a quality score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
+For this systematic review, we evaluate the selected articles described in section \ref{sec:methods}  based on this framework. This will help to create a dataset where the haptic fidelity of systems is evaluated using transparent and consistent methods to overcome the variations in fidelity classification found in different studies (e.g. \cite{Yang2023, Grant2019}. We extend the framework by a third axis, taking into account a confidence score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
 To not describe every detail of the framework in this review, we would like to refer to the Haptic Feedback Fidelity Framework for more detail and examples \cite{Muender2022HapticReality}.
+
+We developed equation \ref{eq:diff}, which can help quantify some factors, with $RE$ standing for the quantity or area in the natural occurrence of the haptic feedback.
 
 \begin{equation}    
 4 \cdot \left(1 - \left(\frac{\left|VR_{\text{factor}} - RE_{\text{factor}}\right|}{RE_{\text{factor}}}\right)\right)
 \label{eq:diff}
 \end{equation}
-
-We developed equation \ref{eq:diff}, which can help with quantifying some factors, with $RE$ standing for the quantity or area in the natural occurrence of the haptic feedback.
-
 
 
 
@@ -68,7 +69,8 @@ In the following, the \textit{foundational factors} are described.
 
 \begin{itemize}
     \item \textbf{Body Location:} 
-    This factor describes whether the haptic feedback on the user's body created by the system aligns with where the person would perceive the stimulus in the natural occurrence of the interaction \cite{Muender2022HapticReality}. Here, the ability to localize a point on the skin for different body parts is taken into account, giving more weight to body parts where the point localization threshold is significantly lower (e.g. hallux, upper lip, nose, cheek, forehead, and all fingers) \cite{Lederman2009HapticTutorial}. Equation \ref{eq:diff} can help with quantification of this factor.
+    This factor describes whether the haptic feedback on the user's body created by the system aligns with where the person would perceive the stimulus in the natural occurrence of the interaction \cite{Muender2022HapticReality}. Here, the ability to localize a point on the skin for different body parts is taken into account, giving more weight to body parts where the point localization threshold is significantly lower (e.g. hallux, upper lip, nose, cheek, forehead, and all fingers) \cite{Lederman2009HapticTutorial}. In our work, we weighted these body parts with a factor of two.
+    Equation \ref{eq:diff} can help with the quantification of this factor, with $VR_{factor}$ being the number of body parts that are involved in VR, and $RE_{factor}$ being the number of body parts involved in the natural occurrence of the interaction.
     
     \item \textbf{Body Area:} 
     This factor accounts for the degree to which the same extent of the user's body surface is involved in the simulation compared to the natural occurrence of the intended haptics. The density of mechanoreceptors should be considered \cite{Muender2022HapticReality, Lederman2009HapticTutorial}.
@@ -84,11 +86,11 @@ In the following, the \textit{foundational factors} are described.
     This factor determines whether the medium that creates the haptic stimulus matches the perception of the natural occurrence and is in line with the intent \cite{Muender2022HapticReality}. For example, Zenner et al. use actuated flamenco fans to mimic the perception of weight by leveraging the drag created through the air resistance \cite{Zenner2019}. This can be rated with a medium degree of integrity, as it does not match the feeling of weight exactly, but it is superior to using non-actuated flamenco fans, or to providing no weight perception at all.
     
     \item \textbf{Degrees of Freedom:}
-    This factor determines whether the system can deliver haptic feedback with the same degrees of freedom (DoF) as the natural occurrence of the intended haptics \cite{Muender2022HapticReality}. For instance, in the tank gunnery simulation introduced by Liu et al., haptic feedback in the two rotational axes is adequate, since the gun control interface itself operates with only two DoF \cite{LiuG2014}. Equation \ref{eq:diff} can help with quantification of this factor.
+    This factor determines whether the system can deliver haptic feedback with the same degrees of freedom (DoF) as the natural occurrence of the intended haptics \cite{Muender2022HapticReality}. For instance, in the tank gunnery simulation introduced by Liu et al., haptic feedback in the two rotational axes is adequate, since the gun control interface itself operates with only two DoF \cite{LiuG2014}. Equation \ref{eq:diff} can help with the quantification of this factor.
     
     \item \textbf{Hardware Precision:}
     This factor is determined by the extent to which the system can reproduce the detail of haptic feedback compared to the natural occurrence of the intended haptics \cite{Muender2022HapticReality}. 
-    It is influenced by the accuracy of the system (e.g. encoder resolution of stepper motors) and the refresh rate of the haptic stimulation and the display. According to Coles et al., the commonly accepted refresh rate to provide realistic force feedback is at around 1,000 Hz \cite{Coles2011TheArt}, depending on the object's stiffness. Coles et al. state that hard objects require a higher refresh rate than soft objects. Although we agree with this terminus, we suggest that also the type of task has to be taken into account when evaluating hardware precision. Fast and precise tasks such as following a 3D path with a ring in the shortest possible time \cite{Oquendo2024} require a higher feedback frequency than controlling an underwater robot through currents with moderate speed and predictable obstacles \cite{Xia2023}.
+    It is influenced by the accuracy of the system (e.g. encoder resolution of stepper motors) and the refresh rate of the haptic stimulation and the display. According to Coles et al., the commonly accepted refresh rate to provide realistic force feedback is at around 1 kHz \cite{Coles2011TheArt}, depending on the object's stiffness. Coles et al. state that hard objects require a higher refresh rate than soft objects. Although we agree with this terminus, we suggest that also the type of task has to be taken into account when evaluating hardware precision. Fast and precise tasks such as following a 3D path with a ring in the shortest possible time \cite{Oquendo2024} require a higher feedback frequency than controlling an underwater robot through currents with moderate speed and predictable obstacles \cite{Xia2023}.
     For this review, we give a perfect score for a system with a 1,000 Hz refresh rate for the haptics regardless of the task. Depending on the task and the object stiffness we give fewer points to the system if its refresh rate is lower.
 
     Regarding the accuracy of the haptic feedback, the human ability to localize a point on the skin needs to be considered, as the feedback has to be more precise when applied to sensitive areas such as the fingertips compared to less sensitive areas such as the shoulder \cite{Lederman2009HapticTutorial}.
@@ -123,16 +125,16 @@ In the following, the \textit{limiting factors} are described. As these factors 
 
     \item \textbf{Constraints:}
     This factor describes the degree to which the system constrains the user's movement other than in the intended way \cite{Muender2022HapticReality}.
-
-    \item \textbf{Scoring:}
-    The score for the haptic fidelity is calculated based on equation \ref{eq:fidelity_score}, in which $X_F$ are the foundational and $X_L$ are the limiting factors \cite{Muender2022HapticReality}:
-
-    \begin{equation}
-    	\frac{\sum_{N_F}^{0} X_F}{N_F} \cdot e^{-0.0027 \left(\sum_{N_L}^{0} X_F^2 \right)^2}
-    	\label{eq:fidelity_score}
-    \end{equation}
     
 \end{itemize}
+
+\textbf{Scoring:}
+The score for the haptic fidelity is calculated based on equation \ref{eq:fidelity_score}, in which $X_F$ are the foundational and $X_L$ are the limiting factors \cite{Muender2022HapticReality}:
+
+\begin{equation}
+    \frac{\sum_{N_F}^{0} X_F}{N_F} \cdot e^{-0.0027 \left(\sum_{N_L}^{0} X_F^2 \right)^2}
+    \label{eq:fidelity_score}
+\end{equation}
 
 
 \paragraph{Versatility}
@@ -141,7 +143,7 @@ The versatility is assessed on a 5-point Likert scale with 0 for very specific s
 
 \paragraph{Confidence Score}
 \label{sec:confidence}
-In total, 14 parameters needed to be evaluated for each haptic feedback system. We calculated a score based on the percentage of factors, that were not described in the paper itself, nor could be accessed through internet research (e.g. by looking up the specifications for the commercial products).
+In total, 14 parameters needed to be evaluated for each haptic feedback system. We calculated a score based on the proportion of factors, that were not described in the paper itself, nor could be accessed through internet research (e.g. by looking up the specifications for the commercial products).
 We divided the papers into four groups based on the quality score:
 
 \begin{enumerate}
@@ -153,7 +155,7 @@ We divided the papers into four groups based on the quality score:
 
 
 \subsubsection{Clustering of the Data}
-To classify the data based on haptic fidelity and versatility, we divide each attribute into three categories. We therefore organize the dataset into a 3x3 grid, resulting in a total of 9 fields. Each axis is evenly split at intervals of $k \frac{4}{3}$, as the entire scale ranges from 0 to 4 on both axes.
+To classify the data based on haptic fidelity and versatility, we divide each attribute into three categories. We therefore organize the dataset into an evenly split 3x3 grid, resulting in a total of 9 fields. The scale ranges from 0 to 4 on both axes.
 
 For mid-fidelity haptic feedback, which is neither entirely abstract nor fully realistic, we introduce the term \textit{representational}. For medium versatility, which is neither highly specific to one use case nor entirely generic, we use the term \textit{broad}.
 
