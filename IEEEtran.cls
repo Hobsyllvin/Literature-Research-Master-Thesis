@@ -6306,6 +6306,18 @@ Use \@IEEEbackslash #2 instead.}}
 % provide some legacy IEEEtran environments
 
 
+%% Added by Christian to include page numbers
+% \makeatletter
+% \def\ps@headings{%
+% \def\@oddhead{\mbox{}\scriptsize\rightmark \hfil \thepage}%
+% \def\@evenhead{\scriptsize\thepage \hfil \leftmark\mbox{}}%
+% \def\@oddfoot{}%
+% \def\@evenfoot{}}
+% \makeatother
+% \pagestyle{headings}
+%%
+
+
 % V1.8a no more support for these legacy commands
 %\def\authorblockA{\@IEEElegacywarn{authorblockA}{IEEEauthorblockA}\IEEEauthorblockA}
 %\def\authorblockN{\@IEEElegacywarn{authorblockN}{IEEEauthorblockN}\IEEEauthorblockN}
