@@ -54,7 +54,7 @@ df.reset_index(inplace=True)
 df['Year'] = df['Year'].dt.year
 
 # Plotting every year
-plt.figure(figsize=(2.3, 2.2))
+plt.figure(figsize=(2.3, 2))
 plt.bar(df['Year'].astype(str), df['Amount'], width=0.8)
 
 # Setting the x-axis labels to show only every 5 years
