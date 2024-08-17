@@ -53,7 +53,7 @@ The evaluation of haptic feedback fidelity is based on eight foundational factor
 For this systematic review, we evaluate the selected articles described in section \ref{sec:methods}  based on this framework. This will help to create a dataset where the haptic fidelity of systems is evaluated using transparent and consistent methods to overcome the variations in fidelity classification found in different studies (e.g. \cite{Yang2023, Grant2019}. We extend the framework by a third axis, taking into account a confidence score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
 To not describe every detail of the framework in this review, we would like to refer to the Haptic Feedback Fidelity Framework for more detail and examples \cite{Muender2022HapticReality}.
 
-We developed equation \ref{eq:diff}, which can help quantify some factors, with $RE$ standing for the quantity or area in the natural occurrence of the haptic feedback.
+In an attempt to make some of the factors easier to quantify and to reduce the subjectiveness of the evaluation, we developed equation \ref{eq:diff}. It expresses the relation between properties in the virtual environment (addressed with $VR_{factor}$) and the natural occurrence of the haptic feedback ($RE_{factor}$). The relation is scaled so it fits the 5-point Likert scale.
 
 \begin{equation}    
 4 \cdot \left(1 - \left(\frac{\left|VR_{\text{factor}} - RE_{\text{factor}}\right|}{RE_{\text{factor}}}\right)\right)
@@ -129,7 +129,7 @@ In the following, the \textit{limiting factors} are described. As these factors 
 \end{itemize}
 
 \textbf{Scoring:}
-The score for the haptic fidelity is calculated based on equation \ref{eq:fidelity_score}, in which $X_F$ are the foundational and $X_L$ are the limiting factors \cite{Muender2022HapticReality}:
+The score for the haptic fidelity is calculated based on equation \ref{eq:fidelity_score}, with $N_F$ for the number of foundational factors, $X_F$ for the respective rating of these factors, $N_L$ for the number of limiting factors and $X_L$ for their respective rating \cite{Muender2022HapticReality}:
 
 \begin{equation}
     \frac{\sum_{N_F}^{0} X_F}{N_F} \cdot e^{-0.0027 \left(\sum_{N_L}^{0} X_F^2 \right)^2}
