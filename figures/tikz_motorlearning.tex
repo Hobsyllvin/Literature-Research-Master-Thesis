@@ -1,0 +1,173 @@
+\begin{tikzpicture}[scale=3.9]
+
+    % Draw axes
+    \foreach \x in {0,0.5,1,1.5,2} {
+        \draw [very thin, lightgray](\x*2 cm, 0-0.05) -- (\x*2 cm, 2+0.05) node[anchor=north] {};
+        \draw [very thin, lightgray](0-0.05,\x cm) -- (4+0.05,\x cm) node[anchor=east] {};
+    }
+
+    % Add axis labels
+    \draw[thick,<->] (0,1) -- (4,1) node[anchor=south west] {\parbox{2cm}{Haptic \\ Fidelity}};
+    \draw[thick,<->] (2,0) -- (2,2) node[anchor=south] {Versatility};
+
+    \node at (0,0.92) {\footnotesize{abstract}};
+    \node at (2.3,0.92) {\scriptsize{representational}};
+    \node at (4,0.92) {\footnotesize{realistic}};
+    \node at (1.8,0.05) {\footnotesize{specific}};
+    \node at (1.8,1.07) {\footnotesize{broad}};
+    \node at (1.8,1.95) {\footnotesize{generic}};
+
+    % Draw the horizontal & vertical dotted lines
+    \draw[dashed, thick, dottedlines] (4/3,0) -- (4/3,2);
+    \draw[dashed, thick, dottedlines] (8/3,0) -- (8/3,2);
+    \draw[dashed, thick, dottedlines] (0,2/3) -- (4,2/3);
+    \draw[dashed, thick, dottedlines] (0,4/3) -- (4,4/3);
+
+
+    % Legend
+    \draw[fill=white] (0.1,1.96) rectangle (0.97,1.2); % Legend border
+    \node[anchor=west] at (0.13, 1.85) {\textbf{Legend}}; % Legend title
+    
+    \node[circle, fill=c1, inner sep=1.7pt] at (0.2, 1.73) {};
+    \node[anchor=west] at (0.25, 1.73) {\scriptsize{Motor learning ++}};
+
+    \node[diamond, fill=c2, inner sep=1.5pt] at (0.2, 1.65) {};
+    \node[anchor=west] at (0.25, 1.65) {\scriptsize{Motor learning +}};
+
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.5pt] at (0.2, 1.57) {};
+    \node[anchor=west] at (0.25, 1.57) {\scriptsize{Motor learning o}};
+
+    \node[rectangle, fill=c4, inner sep=1.7pt] at (0.2, 1.49) {};
+    \node[anchor=west] at (0.25, 1.49) {\scriptsize{Motor learning -}};
+
+    \node[star, star points=5, star point ratio=0.6, fill=c5, inner sep=1.6pt] at (0.2, 1.41) {};
+    \node[anchor=west] at (0.25, 1.41) {\scriptsize{Motor learning - -}};
+
+    \node[diamond, fill=c2, inner sep=1.2pt] at (0.2, 1.31) {};
+    \node[diamond, fill=white, inner sep=0.5pt] at (0.2,1.31) {};
+    \node[anchor=west] at (0.25, 1.31) {\scriptsize{Assumed value}};
+
+
+    % Data Points
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.21,0.5) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.01,1) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.75,1) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.62,0.5) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.34,0.5) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.09,0.5) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (4,0) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (1.5,1.5) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (2.63,2) {};
+    \node[circle, fill=c1, inner sep=1.7pt] at (3.27,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.5,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.22,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.2,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.8,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.34,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.34,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.22,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.63,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.75,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.21,0) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.25,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (4,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.88,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.84,1.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.7,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.71,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (4,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.57,2) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.59,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.28,0.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.42,1.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.72,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.5,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.49,1.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.61,0) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.57,2) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (3.71,1) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.31,1.5) {};
+    \node[diamond, fill=c2, inner sep=1.2pt] at (2.84,1) {};
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.3pt] at (0.63,1) {};
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.3pt] at (1.25,1.5) {};
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.3pt] at (3.38,1) {};
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.3pt] at (3.75,1) {};
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.3pt] at (1.39,1) {};
+    \node[regular polygon, regular polygon sides=5, fill=c3, inner sep=1.3pt] at (2.76,0.5) {};
+    \node[rectangle, fill=c4, inner sep=1.7pt] at (1.08,0.5) {};
+    \node[rectangle, fill=c4, inner sep=1.7pt] at (2.99,1.5) {};
+    \node[rectangle, fill=c4, inner sep=1.7pt] at (3.09,1) {};
+    \node[star,star points=5,star point ratio=0.6, fill=c5, inner sep=1.6pt] at (3.29,1) {};
+
+
+    % Add inner white filling for assumed data points
+    \node[diamond, fill=white, inner sep=0.5pt] at (3.25,1) {};
+
+    \node[diamond, fill= white, inner sep=0.5pt] at (3.7,0.5) {};
+    \node[circle, fill= white, inner sep=0.5pt] at (1.5,1.5) {};
+    \node[diamond, fill= white, inner sep=0.5pt] at (3.71,0.5) {};
+    \node[diamond, fill= white, inner sep=0.5pt] at (4,0.5) {};
+    
+    \node[diamond, fill= white, inner sep=0.5pt] at (2.28,0.5) {};
+
+    \node[diamond, fill= white, inner sep=0.5pt] at (3.5,1) {};
+    \node[diamond, fill= white, inner sep=0.5pt] at (2.49,1.5) {};
+    \node[diamond, fill= white, inner sep=0.5pt] at (3.61,0) {};
+    \node[regular polygon, regular polygon sides=5, fill= white, inner sep=0.5pt] at (2.76,0.5) {};
+    
+    \node[diamond, fill= white, inner sep=0.5pt] at (3.71,1) {};
+    
+    
+    % Add citations to datapoints
+    \node at (3.5,1.1) {\footnotesize{\cite{Brickler2019}}};
+    \node at (3.22,1.1) {\footnotesize{\cite{Caccianiga2021}}};
+    \node at (0.63,1.1) {\footnotesize{\cite{Crespo2015}}};
+    \node at (3.01,1.1) {\footnotesize{\cite{Dai2023}}};
+    \node at (3.16,0.4) {\footnotesize{\cite{Dai2023}}};
+    \node at (3.38,0.9) {\footnotesize{\cite{Feygin2002HapticSkill}}};
+    \node at (3.75,1.2) {\footnotesize{\cite{Feygin2002HapticSkill}}};
+    \node at (2.63,1.1) {\footnotesize{\cite{Gambaro2014}}};
+    \node at (2.75,0.9) {\footnotesize{\cite{Gambaro2014}}};
+    \node at (3.21,0.1) {\footnotesize{\cite{Graham2008}}};
+    \node at (3.25,0.9) {\footnotesize{\cite{Gunter2022}}};
+    \node at (4,0.1) {\footnotesize{\cite{Huang2006}}};
+    \node at (4,0.6) {\footnotesize{\cite{Huang2007}}};
+    \node at (3.88,0.6) {\footnotesize{\cite{LeeH2014}}};
+    \node at (2.84,1.6) {\footnotesize{\cite{LeeY2019}}};
+    \node at (3.7,0.6) {\footnotesize{\cite{LiuG2014}}};
+    \node at (1.5,1.6) {\footnotesize{\cite{LiuH2019}}};
+    \node at (2.57,2.1) {\footnotesize{\cite{McAnally2023}}};
+    \node at (3.59,0.6) {\footnotesize{\cite{Mohanty2023}}};
+    \node at (2.72,1.2) {\footnotesize{\cite{Oquendo2024}}};
+    \node at (3.09,0.9) {\footnotesize{\cite{Oquendo2024}}};
+    \node at (3.5,1.2) {\footnotesize{\cite{Rodriguez2010}}};
+    \node at (2.57,1.9) {\footnotesize{\cite{Vasudevan2020}}};
+    \node at (3.22,0.6) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.285,0.4) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.395,0.4) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.34,0.6) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.62,0.4) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.75,1.1) {\footnotesize{\cite{Fehlberg2012}}};
+    \node at (3.09,0.6) {\footnotesize{\cite{Grant2019}}};
+    \node at (3.71,0.7) {\footnotesize{\cite{Macuga2019}}};
+    \node at (3.35,1.1) {\footnotesize{\cite{Morris2007}}};
+    \node at (2.28,0.6) {\footnotesize{\cite{Najdovski2020}}};
+    \node at (2.99,1.6) {\footnotesize{\cite{Oezen2022}}};
+    \node at (3.42,1.6) {\footnotesize{\cite{Oezen2022}}};
+    \node at (2.76,0.6) {\footnotesize{\cite{Vaghela2021}}};
+    \node at (3.71,0.9) {\footnotesize{\cite{Wall2000}}};
+    \node at (2.7,2.1) {\footnotesize{\cite{Yang2023}}};
+    \node at (2.84,1.2) {\footnotesize{\cite{Yang2023}}};
+    \node at (3.27,1.2) {\footnotesize{\cite{Yang2023}}};
+    \node at (2.2,1.1) {\footnotesize{\cite{Chappell2022}}};
+    \node at (2.8,1.1) {\footnotesize{\cite{Chi2017}}};
+    \node at (1.25,1.6) {\footnotesize{\cite{Hanashima2023}}};
+    \node at (1.08,0.6) {\footnotesize{\cite{Lee2012}}};
+    \node at (1.39,1.1) {\footnotesize{\cite{Perez2023}}};
+    \node at (2.49,1.6) {\footnotesize{\cite{Trinitatova2023}}};
+    \node at (3.61,0.1) {\footnotesize{\cite{Vaghela2021}}};
+    \node at (2.31,1.6) {\footnotesize{\cite{Xia2023}}};
+    \node at (4,0.4) {\footnotesize{\cite{Manivannan2008}}};
+
+    
+\end{tikzpicture}

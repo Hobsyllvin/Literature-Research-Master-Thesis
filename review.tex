@@ -1,16 +1,21 @@
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \documentclass[conference]{IEEEtran}
+\pagestyle{plain}
 \usepackage{fontspec}
 \usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{textcomp}
 \usepackage{xcolor} 
 \usepackage{comment}
 \usepackage{booktabs}
 \usepackage{multicol}
 \usepackage{stfloats}
+\usepackage{nameref}
+\usepackage{svg}
 
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
@@ -27,8 +32,10 @@
 % Some colors
 \definecolor{c1}{RGB}{84, 156, 22}
 \definecolor{c2}{RGB}{190, 214, 71}
-\definecolor{c3}{RGB}{237, 163, 52}
-\definecolor{c4}{RGB}{194, 36, 21}
+\definecolor{c3}{RGB}{212, 197, 38}
+\definecolor{c4}{RGB}{212, 125, 38}
+\definecolor{c5}{RGB}{194, 36, 21}
+\definecolor{dottedlines}{RGB}{33, 82, 117}
 \definecolor{darkgreen}{rgb}{0.0, 0.4, 0.0}
 
 % Define the command \struct
@@ -52,9 +59,13 @@ L.MarchalCrespo@tudelft.nl}
 }
 
 \maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
 
+%% REVISIT %%
 \begin{abstract}
-The abstract will come here.
+Simulations in virtual reality (VR) offer a robust platform for acquiring new skills across diverse applications. The virtual environment (VE) also facilitates the study of complex skills and user performance evaluation, enhancing our understanding of motor learning. Recent research suggests that haptic feedback in VR offers a great way to improve several aspects of motor learning, including timing, accuracy, and skill transfer. The many approaches to providing haptic feedback differ in their feedback fidelity, i. e. how realistic the interaction in VR feels. However, the effect of varying levels of feedback fidelity on motor learning remains unclear. Here, we present a systematic review, in which we evaluate the feedback fidelity of the systems described in the studies using the Haptic Feedback Fidelity Framework to create a standardized basis for comparison. We enhance the framework with a confidence score, to account for the varying quality of the involved studies, and a score for the observed impact on motor learning. Our findings indicate that abstract haptic feedback, characterized by low fidelity and limited alignment with user actions, generally resulted in negative or negligible impacts on motor learning. Representational feedback, with moderate fidelity, typically produced positive outcomes, including decreased response times and enhanced performance. High-fidelity haptic feedback showed an overall positive impact on motor learning, particularly for tasks requiring ballistic movements or high precision, or involving a third dimension. With this work, we aim to enhance the understanding of how various forms of haptic feedback affect motor learning.
+
 \end{abstract}
 
 \begin{IEEEkeywords}
