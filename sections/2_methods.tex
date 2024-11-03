@@ -9,9 +9,25 @@
 
 \section{Methods}
 \label{sec:methods}
-This systematic review is conducted utilizing the PRISMA methodology \cite{Page2021TheReviews} to ensure transparent and complete reporting of the topics examined.
+
+\subsection{Definitions}
+\label{sec:definitions}
+
+\subsubsection{Haptic Guidance}
+Haptic guidance, also known as physical guidance or physical assistance \cite{Sigrist2013AugmentedReview}, refers to the user being physically guided through the ideal motion by a haptic interface, providing kinesthetic information on what is required \cite{Feygin2002HapticSkill}. 
+For example, in a study by Marchal-Crespo et al., the participants were required to bounce a ball on a racket. In the haptic guidance condition, the haptic interface moved the virtual racket along an optimal reference trajectory, providing kinesthetic feedback to help the user learn the ideal motion \cite{Crespo2015}.
+
+\subsubsection{Haptic Augmented Feedback}
+Haptic augmented feedback extends haptic guidance by also incorporating any haptic sensation, that guides the user toward, but not necessarily through the desired motion \cite{Sigrist2013AugmentedReview}.
+
+\subsubsection{Haptic Rendering}
+Haptic rendering, on the other hand, refers to representing the tactile feedback one would expect from interacting with a real object in the virtual world. By detecting the collision with the virtual object and then responding with the appropriate force, the user is enabled to feel object properties (e.g. shape, stiffness, texture) in the virtual environment \cite{Basdogan2002HapticEnvironments, Salisbury1997Phantom-basedObjects}. \newline
+
+Since the feedback mechanisms of haptic guidance and augmented feedback and their effect on motor learning differ greatly from those of haptic rendering \cite{Sigrist2013AugmentedReview}, for the classification of fidelity, we only concentrate on the evaluation of haptic rendering conditions in the selected studies. Because the distinction between haptic rendering and haptic guidance/augmented feedback in their effects on motor learning is not always explicitly described, we mark papers that include both haptic rendering and augmented feedback in the graphs and distinguish between the haptic feedback conditions as clearly as possible.
 
 \subsection{Search Strategy}
+
+This systematic review is conducted utilizing the PRISMA methodology \cite{Page2021TheReviews} to ensure transparent and complete reporting of the topics examined.
 
 \subsubsection{Search Terms}
 Several relevant articles were reviewed at the beginning to find eligible search terms. The query based on the research question consists of three main parts, namely \textit{virtual reality}, \textit{somatosensory feedback}, and \textit{motor learning}, each term with their respective synonyms. 
@@ -27,7 +43,7 @@ The results were saved in the library of Mendeley (v2.112.0) by Elsevier, NL, in
 \label{sec:eligibility}
 To qualify for inclusion, studies had to focus on the impact of somatosensory feedback on motor learning in humans. We included studies with healthy participants only, as motor-impaired patients often know how to perform a movement but are physically constrained by their condition, therefore augmented feedback may help the motor learning of patients in a different way compared to healthy subjects \cite{Sigrist2013AugmentedReview}. There were no publication date or language limitations.
 
-Conversely, studies were excluded if they (i) did not relate to motor learning in humans; (ii) focused on systems not providing haptic feedback in VR; (iii) were concerned with a neurological condition affecting motor learning; or (iv) explained a new assessment system for the evaluation of motor learning.
+Conversely, studies were excluded if they (i) did not relate to motor learning in humans; (ii) focused on systems not providing haptic feedback in VR; (iii) involved augmented haptic feedback conditions only; (iv) were concerned with a neurological condition affecting motor learning; or (v) explained a new assessment system for the evaluation of motor learning.
 
 \subsubsection{Study Selection}
 At first, duplicate publications were identified and removed. The results were then screened based on their title and abstract. 
@@ -38,7 +54,7 @@ Finally, the full-text articles were assessed to determine their eligibility for
 
 
 \subsection{Search Analysis}
-\subsubsection{Haptic Feedback Fidelity Framework}
+\subsubsection{Haptic Fidelity Framework}
 
 
 The fidelity of a system describes the objective degree of exactness in its output \cite{McMahan2011ExploringGames}. 
@@ -46,14 +62,16 @@ In the context of haptic feedback, this refers to the ability to generate accura
 
 Several frameworks have been proposed to assess the feedback fidelity of the VE. They concentrate on either the physical attributes of the system (e.g. the FIFA framework developed by McMahan et al. \cite{McMahan2011ExploringGames}), aim to evaluate feedback fidelity through questionnaires (e.g. the haptics addition \cite{Boos2017ErweiterungHaptik} to the User Experience Questionnaire \cite{Laugwitz2008ConstructionQuestionnaire}) or focus on the effect of the system. Huang et al. for example suggested that skill transfer might be a useful paradigm to evaluate the level of fidelity, assuming that if an environment has infinite fidelity and is therefore perfectly recreating the sensations of the real environment, then there would be no performance loss when transferring a skill from the virtual to the real environment \cite{Huang2006}.
 
-These frameworks, while addressing particular subjective and objective dimensions of haptic feedback systems, fail to capture their full diversity. This gap is addressed by Muender et al., who developed the Haptic Feedback Fidelity Framework \cite{Muender2022HapticReality}. It helps to evaluate a system's haptic feedback fidelity ranging from abstract to realistic and introduces versatility as a second axis, which allows for the differentiation between generic and specific haptic feedback systems. 
+These frameworks, while addressing particular subjective and objective dimensions of haptic feedback systems, fail to capture their full diversity. This gap is addressed by Muender et al., who developed the Haptic Fidelity Framework \cite{Muender2022HapticReality}. It helps to evaluate a system's haptic feedback fidelity ranging from abstract to realistic and introduces versatility as a second axis, which allows for the differentiation between generic and specific haptic feedback systems. 
 
 The evaluation of haptic feedback fidelity is based on eight foundational factors, describing the features of a system and their value, and six limiting factors that negatively impact the perception. Each factor is rated on a 5-point Likert scale (0-4). 
 
-For this systematic review, we evaluate the selected articles described in section \ref{sec:methods}  based on this framework. This will help to create a dataset where the haptic fidelity of systems is evaluated using transparent and consistent methods to overcome the variations in fidelity classification found in different studies (e.g. \cite{Yang2023, Grant2019}. We extend the framework by a third axis, taking into account a confidence score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
-To not describe every detail of the framework in this review, we would like to refer to the Haptic Feedback Fidelity Framework for more detail and examples \cite{Muender2022HapticReality}.
+For this systematic review, we evaluate the selected articles described in section \ref{sec:methods}  based on this framework. This will help to create a dataset where the haptic fidelity of systems is evaluated using transparent and consistent methods to overcome the variations in fidelity classification found in other studies (e.g. \cite{Yang2023, Grant2019}). We extend the framework by a third axis, taking into account a confidence score for each haptic feedback system. This score determines how many of the parameters assessed in the framework have been provided by the researchers. Furthermore, single aspects of the framework are extended in an attempt to make the evaluation more transparent and quantifiable. 
+To not describe every detail of the framework in this review, we would like to refer to the Haptic Fidelity Framework for more detail and examples \cite{Muender2022HapticReality}.
 
-In an attempt to make some of the factors easier to quantify and to reduce the subjectiveness of the evaluation, we developed equation \ref{eq:diff}. It expresses the relation between properties in the virtual environment (addressed with $VR_{factor}$) and the natural occurrence of the haptic feedback ($RE_{factor}$). The relation is scaled so it fits the 5-point Likert scale.
+In an attempt to make some of the factors easier to quantify and to reduce the subjectiveness of the evaluation, we developed equation \ref{eq:diff}. It expresses the relation between properties in the virtual environment (addressed with $VR_{factor}$) and the natural occurrence of the haptic feedback ($RE_{factor}$). 
+
+The relation is scaled so it fits the 5-point Likert scale.
 
 \begin{equation}    
 4 \cdot \left(1 - \left(\frac{\left|VR_{\text{factor}} - RE_{\text{factor}}\right|}{RE_{\text{factor}}}\right)\right)
