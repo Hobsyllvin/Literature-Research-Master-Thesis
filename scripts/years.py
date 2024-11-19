@@ -3,8 +3,11 @@ import matplotlib
 import matplotlib.pyplot as plt
 from io import StringIO
 
-matplotlib.rcParams['mathtext.fontset'] = 'stix'
-matplotlib.rcParams['font.family'] = 'STIXGeneral'
+plt.rcParams.update({
+    "text.usetex": False,
+    "font.family": "serif",
+    "font.serif": ['Times', 'Times New Roman', 'Liberation Serif'],  # Fallback options
+})
 
 # Simulating reading the CSV file 'years.csv'
 # Assuming the file content is in the same format as the provided data
@@ -51,7 +54,7 @@ df.reset_index(inplace=True)
 df['Year'] = df['Year'].dt.year
 
 # Plotting every year
-plt.figure(figsize=(4, 3))
+plt.figure(figsize=(2.3*1.2, 1.85*1.2))
 plt.bar(df['Year'].astype(str), df['Amount'], width=0.8)
 
 # Setting the x-axis labels to show only every 5 years
@@ -64,7 +67,7 @@ plt.ylabel('Number of studies')
 plt.title('')
 
 plt.tight_layout()  # Adjust layout
-plt.savefig("/Users/christian/Documents/Literature-Research-Master-Thesis/figures/years.pdf", format="pdf", bbox_inches="tight")
+plt.savefig("C:/Users/chris/Documents/Thesis/LiteratureResearch/figures/years.pdf", format="pdf", bbox_inches="tight")
 plt.show()
 
 

@@ -1,53 +1,7 @@
-%%%%% CONCLUSION %%%%%
 \section{Conclusion}
 
-\subsection{Impact of Haptic Feedback Fidelity}
-We classified the haptic feedback fidelity into the categories abstract, representational, and specific (i.e. low, medium, and high).
+In this work, we studied the impact of different levels of haptic feedback fidelity on motor learning, by systematically reviewing current research based on the Haptic Fidelity Framework, which we extended to include measures of confidence and motor learning. 
+We found that low feedback fidelity, often resulting from design flaws or a mismatch between the feedback and the task, generally leads to poorer motor performance. Conversely, medium and high-fidelity feedback, aligning closely with the forces involved in the natural occurrence of the task, can greatly improve motor learning. 
+Furthermore, our findings emphasize the importance of applying a common framework when evaluating feedback fidelity to ensure comparability of results across studies on the impact of haptic feedback.
 
-\subsubsection{Abstract Feedback Fidelity}
-A low feedback fidelity score was reported in the studies by Marchal-Crespo et al., Hanashima et al., and Lee et al. \cite{Marchal-Crespo2009ReviewInjury, Hanashima2023, Lee2012}. This low score was primarily due to design compromises, where feedback did not align with the intended user actions (e.g., vibrational feedback at the waist and head for arm movements \cite{Hanashima2023}), or system limitations that exacerbated the limiting factors in Muender et al.'s framework \cite{Muender2022HapticReality} (e.g., restricting a racket bouncing game to one degree of freedom \cite{Marchal-Crespo2009ReviewInjury} or providing indistinguishable vibrational feedback masked by the device itself \cite{Lee2012}). As shown in equation \ref{eq:fidelity_score}, these limiting factors significantly reduce the fidelity score due to their squared impact.
-
-The detrimental effects of these limiting factors were evident in the negative or negligible impacts on motor learning: participants performed worse with haptic feedback at higher frequencies \cite{Lee2012, Marchal-Crespo2009ReviewInjury}, and no significant differences in learning accuracy between feedback modalities were observed \cite{Hanashima2023}. Only Marchal-Crespo et al. found a positive impact of feedback on discrete timing tasks, such as when bouncing the ball at lower frequencies.
-
-In conclusion, studies with significant limitations --- such as constraints, indistinguishable feedback, or feedback misaligned with the task —-- achieved low haptic feedback fidelity. These studies generally reported negative or no impact of haptic feedback on motor learning.
-
-\subsubsection{Representational Feedback Fidelity}
-In this review, ten studies achieved a medium feedback fidelity score. Overall, these studies reported a positive impact of haptic feedback on motor learning, with significant improvements noted by Yang et al. and H. Liu et al. \cite{Yang2023, LiuH2019}. Key positive outcomes included decreased response times \cite{Najdovski2020}, enhanced performance \cite{Chappell2022}, higher accuracy \cite{Perez2023}, and reduced mental demand \cite{Yang2023, Manivannan2008}. 
-
-These systems provided meaningful haptic feedback without major limitations that would increase the limiting factors in Muender et al.'s framework (see section \ref{sec:foundationallimiting}). At this level of haptic fidelity, the greatest versatility scores were achieved \cite{Yang2023, McAnally2023}, indicating promising future research possibilities as the feedback can be applied to a wide variety of tasks.
-
-Additionally, systems offering representational feedback fidelity often delivered feedback at the precise body location where control of the object occurred \cite{Najdovski2020, Manivannan2008}. Consequently, these studies also found a positive impact on motor learning, as the feedback could be easily translated into the required actions by the participants.
-
-
-\subsubsection{Realistic Feedback Fidelity}
-In total, 23 studies involved conditions and systems that achieved a high feedback fidelity score. Overall, the majority of these studies found a positive impact of haptic feedback on motor learning, including improved performance \cite{Fehlberg2012, LiuG2014, Mohanty2023}, better initial learning, and short-term retention \cite{LeeH2014}. Given that these systems were well-designed to fit the required tasks and had minimal limitations in providing haptic feedback, this positive outcome is expected.
-For some studies, participants only improved their accuracy, but not the movement speed, which might be due to the speed-accuracy trade-off \cite{LiuG2014, Caccianiga2021} (see section \ref{sec:realisticbroad}).
-
-The studies with the highest fidelity scores were often limited in versatility \cite{Huang2007, LeeH2014, Vaghela2021}, as the haptic feedback system was precisely replicated in the virtual environment. While these systems offer great potential for studying the impact of realistic haptic feedback on motor learning in VR, the applicability of these systems to other types of tasks, as well as their informative value in a broader context are often limited.
-
-In studies that reported a negative impact of haptic feedback fidelity, certain design limitations had a small impact on the fidelity score in Muender et al.'s framework \cite{Muender2022HapticReality} but a detrimental effect on motor learning. Examples include discrepancies between the provided haptic feedback during the training phase and the conditions during the testing phase \cite{Morris2007}, overreliance on haptic guidance by participants \cite{Oezen2022}, and feedback forces directed opposite to the expected direction \cite{Macuga2019}.
-
-High-fidelity haptic feedback seems to be particularly important for timing in tasks, as it delivers stimuli to the same body parts where the feedback has to be integrated, ensuring a minimal transition between feedback and action. This is especially important for tasks requiring precise or ballistic movements \cite{Mohanty2023, Wall2000}.
-
-\subsection{Benefits and Shortcomings of the Haptic Feedback Fidelity Framework}
-The Haptic Feedback Fidelity Framework introduced by Muender et al. offers a great possibility to objectively rate a system's feedback fidelity, therefore creating a common ground to study the impact of different levels of feedback fidelity on motor learning. However, during this literature research, we noticed a few shortcomings of the framework that distort the impact of different levels of fidelity on motor learning and limit its informative value.
-
-\subsubsection{Abstract Versus Realistic Tasks}
-The fidelity of a feedback system is evaluated based on its correspondence to the natural occurrence of the task. However, for many abstract tasks, such as Fitts' tapping task \cite{Fitts1954TheMovement}, no natural occurrence exists, leading to artificially high haptic feedback fidelity scores. These tasks often allow for simpler haptic feedback (e.g., vibration on tapping), which also increases the versatility score of the haptic systems. 
-
-Despite these high scores, the broader informative value of these studies for meaningful motor learning tasks is limited. This creates an unfair comparison to feedback systems that offer both high versatility and high haptic feedback fidelity for complex motor learning tasks with natural occurrences for comparison \cite{LeeY2019, LiuH2019, Oezen2022}. These complex systems require intricate designs and may still not achieve the same fidelity and versatility scores as simpler designs used in abstract tasks.
-
-
-\subsubsection{Direction of Feedback}
-The study by Macuga et al. demonstrated the detrimental effect of haptic feedback when it is directed opposite to the expected feedback \cite{Macuga2019}. This significant impact on task performance is not adequately reflected in Muender et al.'s framework, as it is only addressed in the foundational factors (see section \ref{sec:foundationallimiting}), resulting in a minimal influence on the overall fidelity score. Similarly, Mohanty et al. found that incongruence between haptic and visual feedback had a substantial impact on motor learning \cite{Mohanty2023}. However, as it is addressed only under the foundational factor \textit{sensor integrity}, it has little effect on the feedback fidelity score \cite{Muender2022HapticReality}.
-
-This shortcoming in the framework distorts the relationship between feedback fidelity and its impact on motor learning.
-
-\subsection{Practical Implications and Future Research}
-This systematic review evaluated the impact of haptic feedback fidelity on motor learning in virtual reality (VR). Overall, the reviewed studies highlighted the generally positive impact of haptic feedback on motor learning, particularly for mid and high-fidelity systems.
-
-This review underscores the importance of using a common framework for evaluating the fidelity of haptic feedback systems to facilitate fair comparisons across studies. The Haptic Feedback Fidelity Framework by Muender et al., despite its shortcomings, offers a valuable tool for this purpose. We recommend its adoption by future researchers to ensure a comprehensive assessment of their haptic feedback systems. Furthermore, limitations of haptic feedback systems or tasks could be identified earlier if researchers assessed their systems with the framework during development, allowing for improvements in the experimental design.
-
-Additionally, the study of skill transfer was notably rare among the assessed papers. This is unfortunate, as evaluating the long-term retention of motor skills under different conditions provides important insights into the actual impact of haptic feedback on motor learning. Incorporating retention tests into user studies would significantly enhance the informative value of the research, displaying a potential research gap.
-
-Another gap that may be addressed by future studies is to study and build systems that offer high versatility and realistic haptic fidelity. Even though these systems might be the most difficult to implement, especially for meaningful real-world tasks, they can provide great value for the study of the impact of haptic feedback on motor learning in VR. 
+We hope that this study serves as a stepping stone towards a common understanding of haptic feedback fidelity to foster our understanding of its impact on motor learning, and to ultimately make (re-)learning new skills in VR more effective. 
