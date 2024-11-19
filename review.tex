@@ -1,5 +1,6 @@
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \documentclass[conference]{IEEEtran}
+\usepackage{rotating}
 \pagestyle{plain}
 \usepackage{fontspec}
 \usepackage{tikz}
@@ -7,6 +8,8 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
+\usepackage{lscape} 
+\usepackage{multirow}
 \usepackage{subcaption}
 \usepackage{textcomp}
 \usepackage{xcolor} 
@@ -16,6 +19,20 @@
 \usepackage{stfloats}
 \usepackage{nameref}
 \usepackage{svg}
+\usepackage{pdflscape}
+\usepackage{fancyhdr} 
+
+\fancypagestyle{rotatedpage}{
+\fancyhf{} %Clears the header/footer
+\fancyfoot{% Footer
+\makebox[\textwidth][r]{% Right
+  \rlap{\hspace{.75cm}% Push out of margin by \footskip
+    \smash{% Remove vertical height
+      \raisebox{4.87in}{% Raise vertically
+        \rotatebox{90}{\thepage}}}}}}% Rotate counter-clockwise
+\renewcommand{\headrulewidth}{0pt}% No header rule
+\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
 
 
 
