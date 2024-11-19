@@ -1,0 +1,904 @@
+\subsection{Overview Haptic Fidelity Scores}
+\begin{table}[htbp]
+\tiny
+\begin{tabular}{lp{4cm}lllllllllllllllllllllcccc}
+\multicolumn{1}{c}{\multirow{3}{*}{\textbf{Paper}}} &
+  \multicolumn{1}{c}{\multirow{3}{*}{\textbf{Condition}}} &
+  \multicolumn{15}{l}{\textbf{\small{Foundational Factors}}} &
+  \multicolumn{7}{l}{\textbf{\small{Limiting Factors}}} &
+  \multicolumn{1}{c}{\textbf{Feedback Fidelity}} &
+  \multicolumn{1}{c}{\textbf{Versatiliy}} &
+  \multicolumn{1}{c}{\textbf{Quality}} \\
+\multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{3}{c}{\textbf{BL}} &
+  \multicolumn{1}{c}{\textbf{BA}} &
+  \multicolumn{3}{c}{\textbf{St}} &
+  \multicolumn{1}{c}{\textbf{Ma}} &
+  \multicolumn{1}{c}{\textbf{SI}} &
+  \multicolumn{3}{c}{\textbf{DoF}} &
+  \multicolumn{1}{c}{\textbf{HP}} &
+  \multicolumn{1}{c}{\textbf{SP}} &
+  \multicolumn{1}{c}{\textbf{Sum}} &
+  \multicolumn{1}{c}{\textbf{De}} &
+  \multicolumn{1}{c}{\textbf{Di}} &
+  \multicolumn{1}{c}{\textbf{HL}} &
+  \multicolumn{1}{c}{\textbf{SE}} &
+  \multicolumn{1}{c}{\textbf{Con}} &
+  \multicolumn{1}{c}{\textbf{SL}} &
+  \multicolumn{1}{c}{\textbf{Sum}} &
+   &
+   &
+   \\
+\multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{Diff} &
+  \multicolumn{1}{c}{Real} &
+  \multicolumn{1}{c}{Total} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{Diff} &
+  \multicolumn{1}{c}{Real} &
+  \multicolumn{1}{c}{Total} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{VR} &
+  \multicolumn{1}{c}{Real} &
+  \multicolumn{1}{c}{Total} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+  \multicolumn{1}{c}{} &
+   &
+   &
+   \\
+\cite{Brickler2019} &
+  - &
+  0 &
+  1 &
+  4 &
+  4 &
+  1 &
+  6 &
+  3 &
+  2 &
+  3 &
+  3 &
+  3 &
+  4 &
+  4 &
+  4 &
+  3.50 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0.00 &
+  3.50 &
+  2 &
+  1.00 \\
+\cite{Chappell2022} &
+  - &
+  2 &
+  4 &
+  2 &
+  1 &
+  6 &
+  9 &
+  1 &
+   &
+  3 &
+  8 &
+  12 &
+  3 &
+  3 &
+  4 &
+  2.43 &
+  2 &
+  1 &
+   &
+  1 &
+  0 &
+   &
+  6.00 &
+  2.20 &
+  2 &
+  0.79 \\
+\cite{Dai2023} &
+  Physical: haptic feedback from physical slider &
+  0 &
+  4 &
+  4 &
+  4 &
+  0 &
+  6 &
+  4 &
+  4 &
+  4 &
+  2 &
+  2 &
+  4 &
+  4 &
+  4 &
+  4.00 &
+  0 &
+  0 &
+   &
+  0 &
+  3 &
+  0 &
+  9.00 &
+  3.21 &
+  1 &
+  0.93 \\
+\cite{Dai2023} &
+  Dynamic: haptic feedback from physical slider and robotic arm &
+  0 &
+  4 &
+  4 &
+  4 &
+  0 &
+  6 &
+  4 &
+  4 &
+  3 &
+  2 &
+  2 &
+  4 &
+  3 &
+  4 &
+  3.75 &
+  0 &
+  0 &
+   &
+  0 &
+  3 &
+  0 &
+  9.00 &
+  3.01 &
+  2 &
+  0.93 \\
+\cite{Fehlberg2012} &
+  Active Handrest with adaptive admittance strategy where   admittance gain was adjusted by time derivative of force input &
+  1 &
+  3 &
+  3 &
+  4 &
+  2 &
+  6 &
+  3 &
+  3 &
+  3 &
+  5 &
+  6 &
+  3 &
+  4 &
+  4 &
+  3.38 &
+  0 &
+  1 &
+   &
+  0 &
+  1 &
+   &
+  2.00 &
+  3.34 &
+  1 &
+  0.86 \\
+\cite{Grant2019} &
+  - &
+  0 &
+  4 &
+  4 &
+  4 &
+  4 &
+  7 &
+  2 &
+  3 &
+  3 &
+  3 &
+  3 &
+  4 &
+  4 &
+   &
+  3.43 &
+  0 &
+  1.5 &
+  0 &
+  0 &
+  2 &
+   &
+  6.25 &
+  3.09 &
+  1 &
+  0.86 \\
+\cite{Gunter2022} &
+  - &
+  0 &
+  2 &
+  4 &
+  0 &
+  2 &
+  7 &
+  3 &
+  3 &
+  4 &
+  12 &
+  12 &
+  4 &
+  4 &
+  4 &
+  3.25 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+   &
+  0.00 &
+  3.25 &
+  2 &
+  0.93 \\
+\cite{Hanashima2023} &
+  - &
+  14 &
+  18 &
+  1 &
+  1 &
+  1 &
+  1 &
+  0 &
+  1 &
+  1 &
+  46 &
+  46 &
+  4 &
+   &
+   &
+  1.33 &
+  0 &
+  2 &
+  1 &
+  0 &
+  0 &
+   &
+  5.00 &
+  1.25 &
+  3 &
+  0.79 \\
+\cite{Huang2006} &
+  - &
+  0 &
+  4 &
+  4 &
+  4 &
+  0 &
+  5 &
+  4 &
+  4 &
+  4 &
+  1 &
+  1 &
+  4 &
+  4 &
+  4 &
+  4.00 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0.00 &
+  4.00 &
+  0 &
+  1.00 \\
+\cite{Huang2007} &
+  Vision-haptic &
+  0 &
+  3 &
+  4 &
+  4 &
+  0 &
+  4 &
+  4 &
+  4 &
+  4 &
+  1 &
+  1 &
+  4 &
+  4 &
+  4 &
+  4.00 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0.00 &
+  4.00 &
+  1 &
+  1.00 \\
+\cite{Lee2012} &
+  - &
+  0 &
+  2 &
+  4 &
+  4 &
+  1 &
+  4 &
+  3 &
+  2 &
+  2 &
+  12 &
+  12 &
+  4 &
+   &
+   &
+  3.17 &
+  0 &
+  2 &
+   &
+  4 &
+  0 &
+   &
+  20.00 &
+  1.08 &
+  1 &
+  0.71 \\
+\cite{LeeY2019} &
+  - &
+  3 &
+  6 &
+  2 &
+  2 &
+  5 &
+  8 &
+  2 &
+  3 &
+  3 &
+  9 &
+  9 &
+  4 &
+  4 &
+  3 &
+  2.88 &
+  1.5 &
+  0 &
+  0 &
+  0 &
+  0 &
+   &
+  2.25 &
+  2.84 &
+  3 &
+  0.93 \\
+\cite{LiuH2019} &
+  - &
+  2 &
+  8 &
+  3 &
+  3 &
+  9 &
+  9 &
+  0 &
+  1 &
+  3 &
+  6 &
+  27 &
+  1 &
+  4 &
+  4 &
+  2.38 &
+  2 &
+  3 &
+  0 &
+  0 &
+  0 &
+  0 &
+  13.00 &
+  1.50 &
+  3 &
+  1.00 \\
+\cite{Macuga2019} &
+  - &
+  0 &
+  8 &
+  4 &
+  4 &
+  0 &
+  7 &
+  4 &
+  4 &
+  3 &
+  2 &
+  2 &
+  4 &
+  3 &
+   &
+  3.71 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+   &
+  0.00 &
+  3.71 &
+  1 &
+  0.86 \\
+\cite{McAnally2023} &
+  - &
+  1 &
+  4 &
+  3 &
+  2 &
+  1 &
+  1 &
+  0 &
+  2 &
+  3 &
+  6 &
+  6 &
+  4 &
+  4 &
+  4 &
+  2.75 &
+  0 &
+  1 &
+   &
+  2 &
+  0 &
+  0 &
+  5.00 &
+  2.57 &
+  4 &
+  0.93 \\
+\cite{Mohanty2023} &
+  - &
+  0 &
+  12 &
+  4 &
+  4 &
+  0 &
+  9 &
+  4 &
+  4 &
+  4 &
+  12 &
+  12 &
+  4 &
+  4 &
+  2 &
+  3.75 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+  2 &
+  4.00 &
+  3.59 &
+  1 &
+  1.00 \\
+\cite{Morris2007} &
+  - &
+  0 &
+  3 &
+  4 &
+  0 &
+  0 &
+  4 &
+  4 &
+  3 &
+  4 &
+  3 &
+  3 &
+  4 &
+   &
+  4 &
+  3.29 &
+  0 &
+  0 &
+   &
+  0 &
+  0 &
+  0 &
+  0.00 &
+  3.29 &
+  2 &
+  0.86 \\
+\cite{Najdovski2020} &
+  - &
+  4 &
+  6 &
+  1 &
+  3 &
+  4 &
+  8 &
+  2 &
+   &
+  3 &
+  1 &
+  1 &
+  4 &
+   &
+  4 &
+  2.83 &
+  2 &
+  1 &
+  0 &
+  0 &
+  2 &
+  0 &
+  9.00 &
+  2.28 &
+  1 &
+  0.86 \\
+\cite{Oezen2022} &
+  Visuo-haptic without arm weight support &
+  0 &
+  4 &
+  4 &
+  4 &
+  2 &
+  5 &
+  2 &
+  2 &
+  4 &
+  6 &
+  6 &
+  4 &
+   &
+  4 &
+  3.43 &
+  0 &
+  0 &
+   &
+  0 &
+  1 &
+  0 &
+  1.00 &
+  3.42 &
+  3 &
+  0.86 \\
+\cite{Oezen2022} &
+  Visuo-haptic with arm weight support &
+  0 &
+  4 &
+  4 &
+  4 &
+  2 &
+  5 &
+  2 &
+  1 &
+  2 &
+  6 &
+  6 &
+  4 &
+   &
+  4 &
+  3.00 &
+  0 &
+  0 &
+   &
+  0 &
+  1 &
+  0 &
+  1.00 &
+  2.99 &
+  3 &
+  0.86 \\
+\cite{Perez2023} &
+  - &
+  0 &
+  4 &
+  4 &
+  4 &
+  10 &
+  12 &
+  1 &
+   &
+  3 &
+  2 &
+  2 &
+  4 &
+   &
+  4 &
+  3.33 &
+  2 &
+  2 &
+   &
+  1 &
+  3 &
+  0 &
+  18.00 &
+  1.39 &
+  2 &
+  0.79 \\
+\cite{Rodriguez2010} &
+  - &
+  0 &
+  4 &
+  4 &
+  4 &
+  0 &
+  6 &
+  4 &
+  4 &
+  3 &
+  3 &
+  6 &
+  2 &
+  4 &
+  3 &
+  3.50 &
+  0 &
+  0 &
+   &
+  0 &
+  0 &
+  0 &
+  0.00 &
+  3.50 &
+  2 &
+  0.93 \\
+\cite{Trinitatova2023} &
+  - &
+  0 &
+  6 &
+  4 &
+  3 &
+  5 &
+  9 &
+  2 &
+  3 &
+  3 &
+  8 &
+  27 &
+  1 &
+   &
+   &
+  2.67 &
+  0 &
+  2 &
+   &
+  0 &
+  1 &
+  0 &
+  5.00 &
+  2.49 &
+  3 &
+  0.79 \\
+\cite{Vaghela2021} &
+  Active haptic feedback &
+  0 &
+  6 &
+  4 &
+  4 &
+  3 &
+  7 &
+  2 &
+  2 &
+  3 &
+  12 &
+  12 &
+  4 &
+  4 &
+   &
+  3.29 &
+  2 &
+  2 &
+  0 &
+  0 &
+  0 &
+   &
+  8.00 &
+  2.76 &
+  1 &
+  0.86 \\
+\cite{Vaghela2021} &
+  Passive haptic feedback &
+  0 &
+  6 &
+  4 &
+  4 &
+  1 &
+  7 &
+  3 &
+  4 &
+  4 &
+  12 &
+  12 &
+  4 &
+  4 &
+   &
+  3.86 &
+  2 &
+  1 &
+   &
+  0 &
+  0 &
+   &
+  5.00 &
+  3.61 &
+  0 &
+  0.79 \\
+\cite{Vasudevan2020} &
+  - &
+  1 &
+  4 &
+  3 &
+  2 &
+  1 &
+  1 &
+  0 &
+  2 &
+  3 &
+  6 &
+  6 &
+  4 &
+  4 &
+  4 &
+  2.75 &
+  0 &
+  1 &
+  0 &
+  2 &
+  0 &
+  0 &
+  5.00 &
+  2.57 &
+  4 &
+  1.00 \\
+\cite{Wall2000} &
+  - &
+  0 &
+  2 &
+  4 &
+  4 &
+  0 &
+  4 &
+  4 &
+  4 &
+  4 &
+  3 &
+  6 &
+  2 &
+  4 &
+   &
+  3.71 &
+  0 &
+  0 &
+  0 &
+  0 &
+  0 &
+   &
+  0.00 &
+  3.71 &
+  2 &
+  0.86 \\
+\cite{Xia2023} &
+  - &
+  \multicolumn{1}{r}{-} &
+  \multicolumn{1}{r}{-} &
+  3 &
+  3 &
+  4 &
+  5 &
+  1 &
+  2 &
+  2 &
+  40 &
+  60 &
+  3 &
+   &
+   &
+  2.33 &
+  1 &
+  1 &
+   &
+  0 &
+  0 &
+   &
+  2.00 &
+  2.31 &
+  3 &
+  0.71 \\
+\cite{Yang2023} &
+  VR Controller only (vibrotactile) &
+  0 &
+  2 &
+  4 &
+  4 &
+  6 &
+  9 &
+  1.00 &
+  2 &
+  3 &
+  6.00 &
+  6 &
+  4 &
+  3 &
+  4 &
+  3.13 &
+  2 &
+  2 &
+   &
+  0 &
+  0 &
+   &
+  8.00 &
+  2.63 &
+  4 &
+  0.86 \\
+\cite{Yang2023} &
+  VR Controller embedded in power tool grip (grip perception) &
+  0 &
+  2 &
+  4 &
+  4 &
+  5 &
+  9 &
+  2.00 &
+  3 &
+  3 &
+  6.00 &
+  6 &
+  4 &
+  3 &
+  4 &
+  3.38 &
+  2 &
+  2 &
+   &
+  0 &
+  0 &
+   &
+  8.00 &
+  2.84 &
+  2 &
+  0.86 \\
+\cite{Yang2023} &
+  VR Controller embedded in power tool grip with battery and   head (grip, weight, shape) &
+  0 &
+  2 &
+  4 &
+  4 &
+  3 &
+  9 &
+  3.00 &
+  3 &
+  3 &
+  6.00 &
+  6 &
+  4 &
+  3 &
+  4 &
+  3.50 &
+  1 &
+  2 &
+   &
+  0 &
+  0 &
+   &
+  5.00 &
+  3.27 &
+  2 &
+  0.86
+\end{tabular}
+\end{table}
+
+\rule{\linewidth}{0.4pt} % Line with full text width and thickness of 0.4pt
+\\ 
+
+\small
+\footnotemark[1]Here comes the text
