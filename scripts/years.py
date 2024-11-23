@@ -21,7 +21,7 @@ csv_data = """Year,Amount
 2009,0
 2010,1
 2011,0
-2012,2
+2012,1
 2013,0
 2014,0
 2015,0
@@ -32,7 +32,7 @@ csv_data = """Year,Amount
 2020,2
 2021,1
 2022,3
-2023,8
+2023,7
 2024,0"""
 
 # Read the data into a pandas DataFrame
@@ -64,7 +64,7 @@ plt.ylabel('Number of studies')
 plt.title('')
 
 plt.tight_layout()  # Adjust layout
-plt.savefig("/Users/christian/Documents/Literature-Research-Master-Thesis/figures/years.pdf", format="pdf", bbox_inches="tight")
+plt.savefig("figures/years.pdf", format="pdf", bbox_inches="tight")
 plt.show()
 
 
